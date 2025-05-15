@@ -22,6 +22,7 @@ rules:
     # or floating point number between 0 and 1.
     # MODIFY THIS PARAMETER
     adjust_timestamp: first
+    table_id: Omon
     grid_file: /pool/data/AWICM/FESOM1/MESHES/core/griddes.nc
     mesh_path: /pool/data/AWICM/FESOM1/MESHES/core
     output_directory: .

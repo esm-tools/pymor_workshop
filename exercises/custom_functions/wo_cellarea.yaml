@@ -35,7 +35,7 @@ pipelines:
       - "pymorize.core.gather_inputs.load_mfdataset"
       - "pymorize.std_lib.generic.get_variable"
       - "script://./wo_cellarea.py:nodes_to_levels"
-      - "pymorize.std_lib.timeaverage.compute_average"
+      - "pymorize.std_lib.timeaverage.timeavg"
       - "script://./wo_cellarea.py:weight_by_cellarea_and_density"
       - "pymorize.std_lib.units.handle_unit_conversion"
       - "pymorize.std_lib.setgrid.setgrid"
