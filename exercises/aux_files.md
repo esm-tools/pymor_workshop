@@ -35,11 +35,15 @@ Now, we will specify ten years of data in one of our rules. You can use any data
     <summary>Solution</summary>
 
     ```yaml
+    general:
+        cmor_version: CMIP6
+    pymor:
+        warn_on_no_rule: False
     rules:
         - name: "linear trend example"
           inputs:
-            - path: "."
-              pattern: "???"
+            - pattern: "wo_fesom_....0101.nc"
+              path: "/work/ab0995/a270243/pymor_workshop/exercises/data"
           aux:
             - name: "numbers"
               path: "numbers.txt"
@@ -54,6 +58,10 @@ Finally, define the `linear_trend` pipeline.
     <summary>Solution</summary>
 
     ```yaml
+    general:
+        cmor_version: CMIP6
+    pymor:
+        warn_on_no_rule: False
     rules:
         - name: "linear trend example"
           inputs:
@@ -69,7 +77,7 @@ Finally, define the `linear_trend` pipeline.
           steps:
             - "pymor.core.gather_inputs.load_mfdataset"
             - "pymor.std_lib.generic.get_variable"
-            - "script://add_linear_trend"
+            - "script://add_linear_trend.py:add_linear_trend"
             - "pymor.std_lib.generic.trigger_compute"
             - "pymor.std_lib.generic.show_data"
             - "pymor.std_lib.files.save_dataset"
@@ -88,9 +96,17 @@ Your YAML file should now be ready. You'll also need to write the script with yo
     <summary>Solution</summary>
 
     ```python
+    import xarray as xr
+
+
     def add_linear_trend(data, rule):
         numbers = rule.aux["numbers"]
-        return data + numbers
+        numbers = [int(n) for n in numbers.split()]
+        # Convert the numbers into an xarray with timestamps:
+        numbers = xr.DataArray(data=numbers, coords=[data.time])
+        data += numbers
+        data.name = "example"
+        return data
     ```
 
 
