@@ -1,0 +1,89 @@
+# Example YAML specification for creating fake data files
+# Each top-level key is a filename to create
+temperature_data.nc:
+  dimensions:
+    time:
+      size: 100
+      dtype: datetime
+      start_date: "2000-01-01"
+      freq: "D"
+    lat:
+      size: 36
+      start: -90
+      step: 5
+    lon:
+      size: 72
+      start: 0
+      step: 5
+  variables:
+    temperature:
+      dimensions: [time, lat, lon]
+      distribution: normal
+      params:
+        mean: 288.15 # 15°C in Kelvin
+        std: 15.0
+      attrs:
+        long_name: "Surface Temperature"
+        units: "K"
+        standard_name: "air_temperature"
+  global_attrs:
+    title: "Synthetic Surface Temperature Data"
+    institution: "ESM-Tools PyMOR Demo"
+    source: "Synthetic data generated for PyMOR workshop"
+    history: "Created on 2025-05-21"
+precipitation_data.nc:
+  dimensions:
+    time:
+      size: 120
+      dtype: datetime
+      start_date: "2000-01-01"
+      freq: "M" # Monthly data
+    lat: 18 # Simple integer dimension with default settings
+    lon: 36
+  variables:
+    precipitation:
+      dimensions: [time, lat, lon]
+      distribution: exponential
+      params:
+        scale: 5.0
+      attrs:
+        long_name: "Monthly Precipitation"
+        units: "mm/day"
+        standard_name: "precipitation_flux"
+    cloud_cover:
+      dimensions: [time, lat, lon]
+      distribution: uniform
+      params:
+        low: 0.0
+        high: 1.0
+      attrs:
+        long_name: "Cloud Cover Fraction"
+        units: "1"
+        standard_name: "cloud_area_fraction"
+  global_attrs:
+    title: "Synthetic Precipitation and Cloud Cover Data"
+    institution: "ESM-Tools PyMOR Demo"
+    source: "Synthetic data generated for PyMOR workshop"
+    history: "Created on 2025-05-21"
+simple_timeseries.nc:
+  dimensions:
+    time: 1000
+  variables:
+    signal:
+      distribution: normal
+      params:
+        mean: 0
+        std: 1
+      attrs:
+        long_name: "Random Signal"
+        units: "arbitrary"
+    trend:
+      distribution: constant
+      params:
+        value: 0.1
+      attrs:
+        long_name: "Linear Trend Component"
+        units: "arbitrary/timestep"
+  global_attrs:
+    title: "Simple Time Series Data"
+    description: "Random signal with trend component"
