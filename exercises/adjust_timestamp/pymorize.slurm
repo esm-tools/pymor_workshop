@@ -9,7 +9,11 @@ export PREFECT_SERVER_API_HOST=0.0.0.0
 # For more info about Prefect caching, see:
 # https://docs-3.prefect.io/v3/develop/settings-ref#local-storage-path
 export PREFECT_RESULTS_LOCAL_STORAGE_PATH=/scratch/a/${USER}/prefect
-loadconda
-conda activate pymorize
+
+#loadconda
+module load python3
+source $(conda info --base)/etc/profile.d/conda.sh
+conda activate pymor
 prefect server start -b
 time pymorize process adjust-timestamp-example.yaml
+prefect server stop
