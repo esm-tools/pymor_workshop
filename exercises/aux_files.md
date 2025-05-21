@@ -3,7 +3,7 @@
 We want to explore auxiliary files in these exercises, which allow you to load up contextual information
 alongside your data. 
 
-1. Aux files with a plain text file
+## 1. Aux files with a plain text file
 
 In this example we will add a simple linear trend to ten years of data, and view the results using
 `ncview`, to confirm that everything works fine. A practical use case here would be to add a varying
