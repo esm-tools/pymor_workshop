@@ -7,4 +7,4 @@
 
 cd /work/ab0246/a270077/SciComp/Projects/pymor-workshop/exercises/aux_files
 which pymor
-time pymor process linear-trend.yaml 
+time pymor process spatial-correction.yaml 

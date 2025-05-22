@@ -10,7 +10,8 @@ In this example we will add a simple linear trend to ten years of data, and view
 correction to your output data, which is different for each timestep and cannot be expressed purely
 mathematically (you would use custom `script://` step for that case).
 
-First, you'll create a text file with simple integers, one per line, counting up to 120. That is going to represent values of the increasing linear trend.
+First, you'll create a text file with simple integers, one per line, counting up to 120. That is 
+going to represent values of the increasing linear trend.
 
 <details>
   <summary>Solution</summary>
@@ -28,7 +29,8 @@ First, you'll create a text file with simple integers, one per line, counting up
   ```
 </details>
 
-Now, we will specify ten years of data in one of our rules. You can use any data you want here:
+Now, we will specify ten years of data in one of our rules. You can use 
+the data from the basic example data here:
 
 <details>
   <summary>Solution</summary>
@@ -40,18 +42,27 @@ Now, we will specify ten years of data in one of our rules. You can use any data
       warn_on_no_rule: False
   rules:
       - name: "linear trend example"
-        inputs:
-          - pattern: "wo_fesom_....0101.nc"
-            path: "/work/ab0995/a270243/pymor_workshop/exercises/data"
+        cmor_variable: tas 
+        experiment_id: "piControl"
+        grid_label: "gn"
+        model_component: "atmos"
+        model_variable: tsurf
+        output_directory: "."
+        source_id: "POOF-ESM"  # Paul's Outrageously Obviously Fake Earth System Model
+        table_name: "Amon"
+        variant_label: "r1i1p1f1"
         aux:
           - name: "numbers"
             path: "numbers.txt"
+        inputs:
+          - pattern: "modelA_temp_....0101.nc"
+            path: "/work/ab0995/a270243/pymor_workshop/exercises/data"
         pipelines:
            - "linear_trend"
   ```
 </details>
 
-Finally, define the `linear_trend` pipeline. 
+Also define the `linear_trend` pipeline.
 
 <details>
   <summary>Solution</summary>
@@ -63,14 +74,23 @@ Finally, define the `linear_trend` pipeline.
       warn_on_no_rule: False
   rules:
       - name: "linear trend example"
-        inputs:
-          - path: "."
-            pattern: "???"
+        cmor_variable: tas 
+        experiment_id: "piControl"
+        grid_label: "gn"
+        model_component: "atmos"
+        model_variable: tsurf
+        output_directory: "."
+        source_id: "POOF-ESM"  # Paul's Outrageously Obviously Fake Earth System Model
+        table_name: "Amon"
+        variant_label: "r1i1p1f1"
         aux:
           - name: "numbers"
             path: "numbers.txt"
+        inputs:
+          - pattern: "modelA_temp_....0101.nc"
+            path: "/work/ab0995/a270243/pymor_workshop/exercises/data"
         pipelines:
-         - "linear_trend"
+           - "linear_trend"
   pipelines:
       - name: "linear_trend"
         steps:
@@ -85,10 +105,8 @@ Finally, define the `linear_trend` pipeline.
 
 </details>
 
-
-
-Your YAML file should now be ready. You'll also need to write the script with your custom step:
-
+Your YAML file should now be ready. You'll also need to write the script
+with your custom step:
     
 <details>
   <summary>Solution</summary>
@@ -106,28 +124,50 @@ Your YAML file should now be ready. You'll also need to write the script with yo
       data.name = "example"
       return data
   ```
-
-
 </details>
 
+Next, you can submit your job:
 
-Next, we add the aux files to the rule:
+<details>
+  <summary>Solution</summary>
+  
+  ```console
+  $ sbatch exercises/aux_files/linear-trend.slurm
+  ```
+</details>
+
+## 2. Use a NetCDF File to add a spatial-varying offset
+
+Here, we want to some form of correction to our data, varying in space. First, you'll
+need to create a random field to add to your data, representing your correction. You can
+use `cdo` for that.
+
+<details>
+  <summary>Solution</summary>
+  
+  ```console
+  $ cdo -f nc -mulc,100 -random,r720x360 my_correction.nc 
+  ```
+</details>
+
+You can adapt the `pymor` configuration from before, this time specifying your field as 
+an offset. You'll also need to create a new custom step script, and make sure that your
+new aux file can be read in correctly.
+
 <details>
   <summary>Solution</summary>
 
-  ```yaml
-  rules:
-      - name: "linear trend example"
-        inputs:
-          - path: "."
-            pattern: "???"
-        aux:
-          - name: "numbers"
-            path: "numbers.txt"
-        pipelines:
-           - "linear_trend"
+  You'll need to take care of a few things here:
+
+  1. Specifying the new aux file
+
+  ```diff
+    aux:
+  -    - name: "numbers"
+  -      path: "numbers.txt"
+  +    - name: "spatial-correction"
+  +      path: "my_correction.nc"
+  +      loader: "xarray.open_dataset"
   ```
 
-
 </details>
-

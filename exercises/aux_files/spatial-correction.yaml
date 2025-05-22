@@ -1,0 +1,43 @@
+general:
+  cmor_version: CMIP6
+  CMIP_Tables_Dir: /work/ab0995/a270243/pymor_workshop/cmip6-cmor-tables/Tables/
+  CV_Dir: /work/ab0995/a270243/pymor_workshop/cmip6-cmor-tables/CMIP6_CVs/
+pymor:
+  warn_on_no_rule: False
+  # dask_cluster: local
+  # dask_cluster_scaling_mode: fixed
+  # fixed_jobs: 1
+
+rules:
+  - name: "linear trend example"
+    cmor_variable: tas 
+    experiment_id: "piControl"
+    grid_label: "gn"
+    model_component: "atmos"
+    model_variable: tsurf
+    output_directory: "."
+    source_id: "POOF-ESM"  # Paul's Outrageously Obviously Fake Earth System Model
+    table_name: "Amon"
+    variant_label: "r1i1p1f1"
+    aux:
+      - name: "spatial-correction"
+        path: "my_correction.nc"
+        loader: "xarray.open_dataset"
+        loader_kwargs:
+          engine: "netcdf4"
+    inputs:
+      - pattern: "modelA_temp_....0101.nc"
+        path: "/work/ab0995/a270243/pymor_workshop/exercises/data"
+    pipelines:
+       - "spatial_correction"
+
+pipelines:
+  - name: spatial_correction
+    steps:
+        - "pymor.core.gather_inputs.load_mfdataset"
+        - "pymor.std_lib.generic.get_variable"
+        - "script://spatial_correction.py:add_spatial_correction"
+        - "pymor.std_lib.generic.trigger_compute"
+        - "pymor.std_lib.generic.show_data"
+        - "pymor.std_lib.files.save_dataset"
+
