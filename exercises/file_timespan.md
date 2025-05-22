@@ -99,6 +99,24 @@ file-timespan: None, table_id: None
 
    </details>
 
+4. How to get a single output file?
+
+   What should be the value of `file_timespan` to get a single output file?
+
+   <details>
+    <summary>Solution</summary>
+
+   The value of `file_timespan` should be large enough to include all time steps.
+
+    ```bash
+    file_timespan: 10YS
+    ```
+   
+   Setting `file_timespan` to some value requires a bit of knowlege of time-span of source data.
+   
+   An alternative approach is to have keyword like `single_file` that `file_timespan` can accept.
+   If you need such a feature, please raise an issue on github or better yet, submit a pull request.
+   </details>
 
 # Workflow
 
