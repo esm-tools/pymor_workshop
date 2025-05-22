@@ -1,0 +1,400 @@
+diags3d01_fesom_29900101.nc:
+  dimensions:
+    time: 12
+    nodes_3d: 3668773
+  variables:
+    diags3d01:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.04425554722547531
+        std: 0.14717386662960052
+      attrs:
+        description: Diagnostic tracer 01
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-22
+diags3d01_fesom_29910101.nc:
+  dimensions:
+    time: 12
+    nodes_3d: 3668773
+  variables:
+    diags3d01:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.04375005513429642
+        std: 0.14560647308826447
+      attrs:
+        description: Diagnostic tracer 01
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-22
+diags3d01_fesom_29920101.nc:
+  dimensions:
+    time: 12
+    nodes_3d: 3668773
+  variables:
+    diags3d01:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.04339731112122536
+        std: 0.14309406280517578
+      attrs:
+        description: Diagnostic tracer 01
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-22
+diags3d01_fesom_29930101.nc:
+  dimensions:
+    time: 12
+    nodes_3d: 3668773
+  variables:
+    diags3d01:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.04377026483416557
+        std: 0.14506089687347412
+      attrs:
+        description: Diagnostic tracer 01
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-22
+diags3d01_fesom_29940101.nc:
+  dimensions:
+    time: 12
+    nodes_3d: 3668773
+  variables:
+    diags3d01:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.04399701580405235
+        std: 0.1458117812871933
+      attrs:
+        description: Diagnostic tracer 01
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-22
+diags3d01_fesom_29950101.nc:
+  dimensions:
+    time: 12
+    nodes_3d: 3668773
+  variables:
+    diags3d01:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.043702445924282074
+        std: 0.14411024749279022
+      attrs:
+        description: Diagnostic tracer 01
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-22
+diags3d01_fesom_29960101.nc:
+  dimensions:
+    time: 12
+    nodes_3d: 3668773
+  variables:
+    diags3d01:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.04372359439730644
+        std: 0.14340540766716003
+      attrs:
+        description: Diagnostic tracer 01
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-22
+diags3d01_fesom_29970101.nc:
+  dimensions:
+    time: 12
+    nodes_3d: 3668773
+  variables:
+    diags3d01:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.04344673454761505
+        std: 0.14340871572494507
+      attrs:
+        description: Diagnostic tracer 01
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-22
+diags3d01_fesom_29980101.nc:
+  dimensions:
+    time: 12
+    nodes_3d: 3668773
+  variables:
+    diags3d01:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.0431068129837513
+        std: 0.14226576685905457
+      attrs:
+        description: Diagnostic tracer 01
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-22
+diags3d01_fesom_29990101.nc:
+  dimensions:
+    time: 12
+    nodes_3d: 3668773
+  variables:
+    diags3d01:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.0427214540541172
+        std: 0.1392531543970108
+      attrs:
+        description: Diagnostic tracer 01
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-22
+diags3d02_fesom_29900101.nc:
+  dimensions:
+    time: 12
+    nodes_3d: 3668773
+  variables:
+    diags3d02:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.028982575982809067
+        std: 0.2709118723869324
+      attrs:
+        description: Diagnostic tracer 02
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-22
+diags3d02_fesom_29910101.nc:
+  dimensions:
+    time: 12
+    nodes_3d: 3668773
+  variables:
+    diags3d02:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.029539665207266808
+        std: 0.2730266749858856
+      attrs:
+        description: Diagnostic tracer 02
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-22
+diags3d02_fesom_29920101.nc:
+  dimensions:
+    time: 12
+    nodes_3d: 3668773
+  variables:
+    diags3d02:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.02907785028219223
+        std: 0.28610363602638245
+      attrs:
+        description: Diagnostic tracer 02
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-22
+diags3d02_fesom_29930101.nc:
+  dimensions:
+    time: 12
+    nodes_3d: 3668773
+  variables:
+    diags3d02:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.02897494286298752
+        std: 0.27765709161758423
+      attrs:
+        description: Diagnostic tracer 02
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-22
+diags3d02_fesom_29940101.nc:
+  dimensions:
+    time: 12
+    nodes_3d: 3668773
+  variables:
+    diags3d02:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.028113579377532005
+        std: 0.26822105050086975
+      attrs:
+        description: Diagnostic tracer 02
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-22
+diags3d02_fesom_29950101.nc:
+  dimensions:
+    time: 12
+    nodes_3d: 3668773
+  variables:
+    diags3d02:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.02789527177810669
+        std: 0.2770974636077881
+      attrs:
+        description: Diagnostic tracer 02
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-22
+diags3d02_fesom_29960101.nc:
+  dimensions:
+    time: 12
+    nodes_3d: 3668773
+  variables:
+    diags3d02:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.028228767216205597
+        std: 0.2770160436630249
+      attrs:
+        description: Diagnostic tracer 02
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-22
+diags3d02_fesom_29970101.nc:
+  dimensions:
+    time: 12
+    nodes_3d: 3668773
+  variables:
+    diags3d02:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.028660736978054047
+        std: 0.2688974440097809
+      attrs:
+        description: Diagnostic tracer 02
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-22
+diags3d02_fesom_29980101.nc:
+  dimensions:
+    time: 12
+    nodes_3d: 3668773
+  variables:
+    diags3d02:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.028055252507328987
+        std: 0.2680029273033142
+      attrs:
+        description: Diagnostic tracer 02
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-22
+diags3d02_fesom_29990101.nc:
+  dimensions:
+    time: 12
+    nodes_3d: 3668773
+  variables:
+    diags3d02:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.02837204560637474
+        std: 0.2916138172149658
+      attrs:
+        description: Diagnostic tracer 02
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-22
