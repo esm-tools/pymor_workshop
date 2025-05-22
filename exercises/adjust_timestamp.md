@@ -10,7 +10,7 @@ Possible values this parameter accepts:
  
 If `adjust_timestamp` is not provided in the yaml file, the default is `first`.
 
-The floating number represent the offset as scaled values for `approx_interval` defined in the CMIP table.
+The floating number represents the offset as scaled values for `approx_interval` defined in the CMIP table.
 
 ---
 
