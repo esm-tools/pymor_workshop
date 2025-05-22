@@ -7,12 +7,12 @@ modelA_temp_18500101.nc:
       freq: "MS"
     lat:
       size: 360
-      start: -90
-      step: 1
+      start: -89.75
+      step: 0.5
     lon:
       size: 720
       start: 0
-      step: 1
+      step: 0.5
   variables:
     tsurf:
       dimensions: [time, lat, lon]
@@ -35,12 +35,12 @@ modelA_temp_18510101.nc:
       freq: "MS"
     lat:
       size: 360
-      start: -90
-      step: 1
+      start: -89.75
+      step: 0.5
     lon:
       size: 720
       start: 0
-      step: 1
+      step: 0.5
   variables:
     tsurf:
       dimensions: [time, lat, lon]
@@ -63,12 +63,12 @@ modelA_temp_18520101.nc:
       freq: "MS"
     lat:
       size: 360
-      start: -90
-      step: 1
+      start: -89.75
+      step: 0.5
     lon:
       size: 720
       start: 0
-      step: 1
+      step: 0.5
   variables:
     tsurf:
       dimensions: [time, lat, lon]
@@ -91,12 +91,12 @@ modelA_temp_18530101.nc:
       freq: "MS"
     lat:
       size: 360
-      start: -90
-      step: 1
+      start: -89.75
+      step: 0.5
     lon:
       size: 720
       start: 0
-      step: 1
+      step: 0.5
   variables:
     tsurf:
       dimensions: [time, lat, lon]
@@ -119,12 +119,12 @@ modelA_temp_18540101.nc:
       freq: "MS"
     lat:
       size: 360
-      start: -90
-      step: 1
+      start: -89.75
+      step: 0.5
     lon:
       size: 720
       start: 0
-      step: 1
+      step: 0.5
   variables:
     tsurf:
       dimensions: [time, lat, lon]
@@ -147,12 +147,12 @@ modelA_temp_18550101.nc:
       freq: "MS"
     lat:
       size: 360
-      start: -90
-      step: 1
+      start: -89.75
+      step: 0.5
     lon:
       size: 720
       start: 0
-      step: 1
+      step: 0.5
   variables:
     tsurf:
       dimensions: [time, lat, lon]
@@ -175,12 +175,12 @@ modelA_temp_18560101.nc:
       freq: "MS"
     lat:
       size: 360
-      start: -90
-      step: 1
+      start: -89.75
+      step: 0.5
     lon:
       size: 720
       start: 0
-      step: 1
+      step: 0.5
   variables:
     tsurf:
       dimensions: [time, lat, lon]
@@ -203,12 +203,12 @@ modelA_temp_18570101.nc:
       freq: "MS"
     lat:
       size: 360
-      start: -90
-      step: 1
+      start: -89.75
+      step: 0.5
     lon:
       size: 720
       start: 0
-      step: 1
+      step: 0.5
   variables:
     tsurf:
       dimensions: [time, lat, lon]
@@ -231,12 +231,12 @@ modelA_temp_18580101.nc:
       freq: "MS"
     lat:
       size: 360
-      start: -90
-      step: 1
+      start: -89.75
+      step: 0.5
     lon:
       size: 720
       start: 0
-      step: 1
+      step: 0.5
   variables:
     tsurf:
       dimensions: [time, lat, lon]
@@ -259,12 +259,12 @@ modelA_temp_18590101.nc:
       freq: "MS"
     lat:
       size: 360
-      start: -90
-      step: 1
+      start: -89.75
+      step: 0.5
     lon:
       size: 720
       start: 0
-      step: 1
+      step: 0.5
   variables:
     tsurf:
       dimensions: [time, lat, lon]
