@@ -14,7 +14,7 @@ modelA_temp_18500101.nc:
       start: 0
       step: 1
   variables:
-    temperature:
+    tsurf:
       dimensions: [time, lat, lon]
       distribution: normal
       params:
@@ -42,7 +42,7 @@ modelA_temp_18510101.nc:
       start: 0
       step: 1
   variables:
-    temperature:
+    tsurf:
       dimensions: [time, lat, lon]
       distribution: normal
       params:
@@ -70,7 +70,7 @@ modelA_temp_18520101.nc:
       start: 0
       step: 1
   variables:
-    temperature:
+    tsurf:
       dimensions: [time, lat, lon]
       distribution: normal
       params:
@@ -98,7 +98,7 @@ modelA_temp_18530101.nc:
       start: 0
       step: 1
   variables:
-    temperature:
+    tsurf:
       dimensions: [time, lat, lon]
       distribution: normal
       params:
@@ -126,7 +126,7 @@ modelA_temp_18540101.nc:
       start: 0
       step: 1
   variables:
-    temperature:
+    tsurf:
       dimensions: [time, lat, lon]
       distribution: normal
       params:
@@ -154,7 +154,7 @@ modelA_temp_18550101.nc:
       start: 0
       step: 1
   variables:
-    temperature:
+    tsurf:
       dimensions: [time, lat, lon]
       distribution: normal
       params:
@@ -182,7 +182,7 @@ modelA_temp_18560101.nc:
       start: 0
       step: 1
   variables:
-    temperature:
+    tsurf:
       dimensions: [time, lat, lon]
       distribution: normal
       params:
@@ -210,7 +210,7 @@ modelA_temp_18570101.nc:
       start: 0
       step: 1
   variables:
-    temperature:
+    tsurf:
       dimensions: [time, lat, lon]
       distribution: normal
       params:
@@ -238,7 +238,7 @@ modelA_temp_18580101.nc:
       start: 0
       step: 1
   variables:
-    temperature:
+    tsurf:
       dimensions: [time, lat, lon]
       distribution: normal
       params:
@@ -266,7 +266,7 @@ modelA_temp_18590101.nc:
       start: 0
       step: 1
   variables:
-    temperature:
+    tsurf:
       dimensions: [time, lat, lon]
       distribution: normal
       params:
