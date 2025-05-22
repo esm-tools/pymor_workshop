@@ -20,22 +20,22 @@ Step.2 Apply cell_area calculations
 
 import xarray as xr
 
-import pymorize.fesom_1p4
-from pymorize.std_lib.units import ureg
+import pymor.fesom_1p4
+from pymor.std_lib.units import ureg
 
 
 def nodes_to_levels(data, rule):
-    mesh_path = rule.get("mesh_path")
+    mesh_path = getattr(rule, "mesh_path", None)
     if mesh_path is None:
         raise ValueError(
             "Set `mesh_path` path in yaml config."
             "Required for converting nodes to levels"
         )
-    return pymorize.fesom_1p4.nodes_to_levels(data, rule)
+    return pymor.fesom_1p4.nodes_to_levels(data, rule)
 
 
 def weight_by_cellarea_and_density(data, rule):
-    gridfile = rule.get("grid_file")
+    gridfile = getattr(rule, "grid_file", None)
     if gridfile is None:
         raise ValueError(
             "Set `grid_file` in yaml config."
