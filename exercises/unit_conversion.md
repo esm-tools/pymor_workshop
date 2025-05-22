@@ -7,12 +7,51 @@ When the units in the source files differ from the units in the CMIP tables, Pym
 
 The exercises covers the following topics:
 
-- Chemical names in units
-- Alternative source of defining units
+- Handling chemical names in units
+- Handling incorrect units in source files
 
-The data for the exercises is available in the `data` directory.
+---
 
-The `CO2f` variable is defined source files (`CO2f_fesom_mon*.nc`) with units `mmolC/m2/d` maps to `fgco2` in the CMIP tables as `kg/m2/d`.
+Exercise folder: `./unit_conversion`
+Data folder: `./data`
 
-To simulate wrong units in source files, the units in files `xCO2f_fesom_mon*.nc` are set to `mol/m2/d`. To correct units are defined in the `unit_conversion/units-example.yaml`
+The data used in the exercise are files matching pattern `CO2f_fesom_mon*.nc`. and `xCO2f_fesom_mon*.nc`.
+The `CO2f` variable defined in these files, map to `fgco2` in CMIP tables (`Omon` table and `Oyr` table).
 
+The units for `CO2f` variable is `mmolC/m2/d`. The units for `fgco2` in CMIP tables is `kg/m2/s`.
+
+To simulate wrong units in source files, the units in files `xCO2f_fesom_mon*.nc` are set to `mol/m2/d`.
+This means, we have tell Pymor tool the correct units by setting it in `unit_conversion/units-example.yaml` file. This is done by using the parameter `model_unit`.
+
+# Exercise
+
+1. Ensure correct units are defined in `unit_conversion/units-example.yaml` file.
+   The following line should be added to the rule `xfgco2`.
+   ```yaml
+   model_unit: "mmolC/m2/d"
+   ```
+
+2. Grep the log file for unit conversion details.
+   ```bash
+   grep -i "molC" $(ls -rtd logs/pymorize-process* | tail -n 1 )
+   ```
+   <details>
+     <summary>Expected output</summary>
+     ```bash
+     2025-03-13 09:06:37.158 | INFO     | pymorize.units:handle_unit_conversion:148 - Converting units: (CO2f -> fgco2) mmolC/m2/d -> kg m-2 s-1
+     2025-03-13 09:06:37.158 | DEBUG    | pymorize.units:handle_chemicals:67 - Chemical element Carbon detected in units mmolC/m2/d.
+     2025-03-13 09:06:37.158 | DEBUG    | pymorize.units:handle_chemicals:68 - Registering definition: molC = 12.0107 * g
+     2025-03-13 09:06:37.470 | INFO     | pymorize.units:handle_unit_conversion:148 - Converting units: (CO2f -> fgco2) mmolC/m2/d -> kg m-2 s-1
+     ```
+   </details>
+
+3. Verify that the output files have correct units.
+   ```bash
+   ncdump -h fgco2_Omon_AWI-AWI-CM-1-1-HR_piControl_r1i1p1f1_gn_300101-300112.nc | grep units
+   ```
+   <details>
+     <summary>Expected output</summary>
+     ```bash
+     units:                 kg m-2 s-1
+     ```
+   </details>
