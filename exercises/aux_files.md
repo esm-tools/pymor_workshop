@@ -10,7 +10,7 @@ In this example we will add a simple linear trend to ten years of data, and view
 correction to your output data, which is different for each timestep and cannot be expressed purely
 mathematically (you would use custom `script://` step for that case).
 
-First, you'll create a text file with simple integers, one per line, counting up to 120
+First, you'll create a text file with simple integers, one per line, counting up to 120. That is going to represent values of the increasing linear trend.
 
 <details>
   <summary>Solution</summary>
