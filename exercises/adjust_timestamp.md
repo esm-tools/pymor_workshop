@@ -10,7 +10,7 @@ Possible values this parameter accepts:
  
 If `adjust_timestamp` is not provided in the yaml file, the default is `first`.
 
-The floating number represent the offset as scaled values for `approx_interval` defined in the CMIP table.
+The floating number represents the offset as scaled values for `approx_interval` defined in the CMIP table.
 
 ---
 
@@ -42,7 +42,7 @@ cdo -s showtimestamp ../data/CO2f_fesom_mon_30010101.nc | xargs -n1 echo
 
 1. To get middle-of-the-month timestamps in the cmorized data, what value is used for `adjust_timestamp`
 
-   Is it `mid` or `14D`?
+   Is it `mid` or `14D`? Try with both of them.
 
    <details>
       <summary>Solution</summary>
@@ -81,7 +81,7 @@ cdo -s showtimestamp ../data/CO2f_fesom_mon_30010101.nc | xargs -n1 echo
 
    </details>
 
-2. If `adjust_timestamp` is ommited from yaml file, how does the timestamps look like in the cmorized data.
+2. If `adjust_timestamp` is ommited from yaml file, how does the timestamps look like in the cmorized data?
  
    <details>
       <summary>Solution</summary>
@@ -108,6 +108,6 @@ cdo -s showtimestamp ../data/CO2f_fesom_mon_30010101.nc | xargs -n1 echo
 
 1. In terminal, change into `./adjust_timestamp/` directory
 2. Edit `adjust-timestamp-example.yaml` file as necessary.
-3. Submit the job to slurm schedular. `sbatch pymorize.slurm`
+3. Submit the job to slurm scheduler. `sbatch pymorize.slurm`
 4. Load `cdo` into environment (if not already loaded) `module load cdo`
 5. Use `cdo` to investigate the timestamp in a file `cdo -s showtimestamp <filename>.nc`

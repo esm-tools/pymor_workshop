@@ -18,7 +18,7 @@ rules:
         pattern: CO2f_fesom_mon_.*nc
     cmor_variable: fgco2
     model_variable: CO2f
-    # adjust_timestamp options: first, middle, last, literal offset like 14D,
+    # adjust_timestamp options: first, mid, last, literal offset like 14D,
     # or floating point number between 0 and 1.
     # MODIFY THIS PARAMETER
     adjust_timestamp: first
