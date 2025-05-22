@@ -33,15 +33,14 @@ This means, we have tell Pymor tool the correct units by setting it in `unit_con
 
 2. Grep the log file for unit conversion details.
    ```bash
-   grep -i "molC" $(ls -rtd logs/pymorize-process* | tail -n 1 )
+   grep -i "molC" $(ls -rtd logs/pymor-process* | tail -n 1 )
    ```
    <details>
      <summary>Expected output</summary>
+
      ```bash
-     2025-03-13 09:06:37.158 | INFO     | pymorize.units:handle_unit_conversion:148 - Converting units: (CO2f -> fgco2) mmolC/m2/d -> kg m-2 s-1
-     2025-03-13 09:06:37.158 | DEBUG    | pymorize.units:handle_chemicals:67 - Chemical element Carbon detected in units mmolC/m2/d.
-     2025-03-13 09:06:37.158 | DEBUG    | pymorize.units:handle_chemicals:68 - Registering definition: molC = 12.0107 * g
-     2025-03-13 09:06:37.470 | INFO     | pymorize.units:handle_unit_conversion:148 - Converting units: (CO2f -> fgco2) mmolC/m2/d -> kg m-2 s-1
+     | DEBUG    | pymor.std_lib.units:handle_chemicals:159 - Chemical element Carbon detected in units mmolC/m2/d.
+     | DEBUG    | pymor.std_lib.units:handle_chemicals:160 - Registering definition: molC = 12.0107 * g
      ```
    </details>
 
@@ -51,6 +50,7 @@ This means, we have tell Pymor tool the correct units by setting it in `unit_con
    ```
    <details>
      <summary>Expected output</summary>
+
      ```bash
      units:                 kg m-2 s-1
      ```
