@@ -81,7 +81,7 @@ cdo -s showtimestamp ../data/CO2f_fesom_mon_30010101.nc | xargs -n1 echo
 
    </details>
 
-2. If `adjust_timestamp` is ommited from yaml file, how does the timestamps look like in the cmorized data.
+2. If `adjust_timestamp` is ommited from yaml file, how does the timestamps look like in the cmorized data?
  
    <details>
       <summary>Solution</summary>
