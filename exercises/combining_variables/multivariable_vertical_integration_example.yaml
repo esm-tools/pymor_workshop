@@ -5,8 +5,8 @@ general:
   email: "pgierz@awi.de"
   cmor_version: "CMIP6"
   mip: "CMIP"
-  CMIP_Tables_Dir: "/work/ab0246/a270077/SciComp/Projects/pymor/cmip6-cmor-tables/Tables"
-  CV_Dir: "/work/ab0246/a270077/SciComp/Projects/pymor/cmip6-cmor-tables/CMIP6_CVs/"
+  CMIP_Tables_Dir: "/work/ab0995/a270243/pymor_workshop/cmip6-cmor-tables/Tables/"
+  CV_Dir: "/work/ab0995/a270243/pymor_workshop/cmip6-cmor-tables/CMIP6_CVs/"
 pymor:
   # parallel: True
   warn_on_no_rule: False
@@ -23,9 +23,9 @@ rules:
   - name: Primary Organic Carbon Production
     description: "Primary organic production. This example has several special cases!"
     inputs:
-      - path: "/work/ab0246/a270077/SciComp/Projects/pymor/examples/04-multivariable-input-with-vertical-integration/model_runs/piControl_LUtrans1850/outdata/recom/"
+      - path: "/work/ab0995/a270243/pymor_workshop/data/"
         pattern: diags3d01_.*.nc
-      - path: "/work/ab0246/a270077/SciComp/Projects/pymor/examples/04-multivariable-input-with-vertical-integration/model_runs/piControl_LUtrans1850/outdata/recom/"
+      - path: "/work/ab0995/a270243/pymor_workshop/data/"
         pattern: diags3d02_.*.nc
     grid_file: /pool/data/AWICM/FESOM1/MESHES/core/griddes.nc
     mesh_path: /pool/data/AWICM/FESOM1/MESHES/core
