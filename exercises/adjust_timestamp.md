@@ -42,7 +42,7 @@ cdo -s showtimestamp ../data/CO2f_fesom_mon_30010101.nc | xargs -n1 echo
 
 1. To get middle-of-the-month timestamps in the cmorized data, what value is used for `adjust_timestamp`
 
-   Is it `mid` or `14D`?
+   Is it `mid` or `14D`? Try with both of them.
 
    <details>
       <summary>Solution</summary>
