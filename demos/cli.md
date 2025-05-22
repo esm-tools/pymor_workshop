@@ -86,3 +86,7 @@ $ pymor validate --help
 │ table                                                                                                                       │
 ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
 ```
+## Dealing with the Prefect Cache
+
+In some circumstances, you may want to inspect the Prefect cache. You can use `pymor cache` to help with 
+that. If you want to purge the cache, you can just remove the files, normally under `~/.prefect/storage/`.
