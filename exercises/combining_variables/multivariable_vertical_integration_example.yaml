@@ -42,17 +42,17 @@ rules:
 pipelines:
   - name: default
     steps:
-      - "pymor.core.gather_inputs.load_mfdataset"
-      - "script://./intpp_recom.py:add_pp_components"
-      - "pymor.fesom_1p4.nodes_to_levels"
-      - "script://./intpp_recom.py:vertical_integration"
-      - "script://./intpp_recom.py:set_pp_units"
-      - "pymor.std_lib.convert_units"
-      - "pymor.std_lib.time_average"
-      - "pymor.std_lib.set_global_attributes"
-      - "pymor.std_lib.trigger_compute"
-      - "pymor.std_lib.show_data"
-      - "pymor.std_lib.files.save_dataset"
+      - "pymor.core.gather_inputs.load_mfdataset" # 0
+      - "script://./intpp_recom.py:add_pp_components" # 1
+      - "pymor.fesom_1p4.nodes_to_levels" # 2
+      - "script://./intpp_recom.py:vertical_integration" # 3
+      - "script://./intpp_recom.py:set_pp_units" # 4
+      - "pymor.std_lib.units.handle_unit_conversion" # 5
+      - "pymor.std_lib.timeaverage.timeavg" # 6
+      - "pymor.std_lib.global_attributes.set_global_attributes" # 7
+      - "pymor.std_lib.generic.trigger_compute" # 8
+      - "pymor.std_lib.generic.show_data" # 9
+      - "pymor.std_lib.files.save_dataset" # 10
 # Settings for using dask-distributed
 distributed:
   worker:

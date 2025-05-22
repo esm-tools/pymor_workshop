@@ -36,17 +36,30 @@ In pseudo-code::
 
 We implement custom steps for the addition and vertical integration.
 
-
-**Preparing the example**
-
-You should run this example on ``DKRZ Levante``. Start by downloading the sample data::
-
-  $ ./download-example-data.sh
-
-This will extract 10 years of example data for the two variables in question.
-
-Next, we define some custom functions in ``intpp_recom.py``:
-
 .. literalinclude:: ../examples/04-multivariable-input-with-vertical-integration/intpp_recom.py
    :linenos:
    :language: python
+
+In your YAML file, you still need to include the script tags in the pipeline:
+
+.. code-block::
+  :linenos:
+  :language: yaml
+
+  pipelines:
+    - name: default
+      steps:
+        - "pymor.core.gather_inputs.load_mfdataset"
+        - "script://./intpp_recom.py:add_pp_components"
+        - "pymor.fesom_1p4.nodes_to_levels"
+        - "script://./intpp_recom.py:vertical_integration"
+        - "script://./intpp_recom.py:set_pp_units"
+        - "pymor.std_lib.convert_units"
+        - "pymor.std_lib.time_average"
+        - "pymor.std_lib.set_global_attributes"
+        - "pymor.std_lib.trigger_compute"
+        - "pymor.std_lib.show_data"
+        - "pymor.std_lib.files.save_dataset"
+
+You can submit this job with the provide slurm script!
+

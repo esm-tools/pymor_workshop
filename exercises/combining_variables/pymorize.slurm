@@ -10,9 +10,7 @@ export PREFECT_SERVER_API_HOST=0.0.0.0
 # https://docs-3.prefect.io/v3/develop/settings-ref#local-storage-path
 export PREFECT_RESULTS_LOCAL_STORAGE_PATH=/scratch/a/${USER}/prefect
 
-module load python3
-source $(conda info --base)/etc/profile.d/conda.sh
-conda activate pymor
+cd /work/ab0246/a270077/SciComp/Projects/pymor-workshop/exercises/combining_variables 
 prefect server start -b
 time pymor process multivariable_vertical_integration_example.yaml
 prefect server stop
