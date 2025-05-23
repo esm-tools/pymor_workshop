@@ -46,7 +46,7 @@ This means, we have tell Pymor tool the correct units by setting it in `unit_con
 
 2. Launch the compute job with `pymor.slurm`. Once the job is finished, grep the log file for unit conversion details.
    ```bash
-   grep -i "molC" $(ls -rtd logs/pymor-process* | tail -n 1 )
+   grep -i "mmolC" $(ls -rtd logs/pymor-process* | tail -n 1 )
    ```
    <details>
      <summary>Expected output</summary>
