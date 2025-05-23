@@ -18,7 +18,7 @@ Data folder: `./data`
 The data used in the exercise are files matching pattern `CO2f_fesom_mon*.nc`. and `xCO2f_fesom_mon*.nc`.
 The `CO2f` variable defined in these files, map to `fgco2` in CMIP tables (`Omon` table and `Oyr` table).
 
-The units for `CO2f` variable is `mmolC/m2/d`. The units for `fgco2` in CMIP tables is `kg/m2/s`.
+Let's imagine you have produced the data, and that you know that the `CO2f` variable's unit is `mmolC/m2/d`. The units for `fgco2` in CMIP tables is `kg/m2/s`.
 
 To simulate wrong units in source files, the units in files `xCO2f_fesom_mon*.nc` are set to `mol/m2/d`.
 This means, we have tell Pymor tool the correct units by setting it in `unit_conversion/units-example.yaml` file. This is done by using the parameter `model_unit`.
