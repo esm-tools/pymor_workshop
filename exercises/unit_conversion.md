@@ -30,8 +30,21 @@ This means, we have tell Pymor tool the correct units by setting it in `unit_con
    ```yaml
    model_unit: "mmolC/m2/d"
    ```
+   <details>
+     <summary>Solution</summary>
 
-2. Grep the log file for unit conversion details.
+     ```yaml
+     rules:
+     # Example showing wrong units in source data files.
+       - name: xfgco2
+         [ ... ]
+         # override units in data file
+         model_unit: "mmolC/m2/d"
+         [ ... ]
+     ```
+   </details>
+
+2. Launch the compute job with `pymor.slurm`. Once the job is finished, grep the log file for unit conversion details.
    ```bash
    grep -i "molC" $(ls -rtd logs/pymor-process* | tail -n 1 )
    ```
