@@ -1,13 +1,13 @@
 # Unit conversion
 
 
-After cmorization process the units in the output files are expected to as defined in the CMIP tables.
+After cmorization process the units in the output files are expected to match those defined in the CMIP tables.
 
-When the units in the source files differ from the units in the CMIP tables, Pymor tool handles the unit conversion automatically almost all the time. It can also handle chemical names in the units. It also support alternative source of defining units. This can be used to define units for variables that are incorrectly defined in the source files.
+When the units in the source files differ from the units in the CMIP tables, Pymor tool tries to handle the unit conversion automatically. It can also handle chemical names in the units (for example, moles of carbon). You, as a user, can also let Pymor know what are the units of your source data. This is useful to define units for variables that are incorrectly defined in the source files, or that are not recognised by the unit-conversion libraries used by Pymor.
 
 The exercises covers the following topics:
 
-- Handling chemical names in units
+- Handling chemical names in units in source files
 - Handling incorrect units in source files
 
 ---
