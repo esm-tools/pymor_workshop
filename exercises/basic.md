@@ -1,19 +1,19 @@
-Connection to albedo
-====================
+Running a basic pymor process
+=============================
 
-The first task consists in connecting to albedo. Make sure that a VPN connection is established and use appropriate tools to create an ssh connection to albedo0 or albedo1.
+After everything is installed, it is time to CMORize our first dataset!
 
-```yaml
-```
+We will start by using example data from a fake atmosphere model and produce `tas` for `Amon`.
+
+First, you'll need to write or modify the basic yaml file to load up that data:
 
 <details>
   <summary>Solution</summary>
-  
-  On a Windows system the software 'Putty' provides one option for the connection.
 
-  On a Mac or a Linux machine use the Terminal application and use the command.
+  Here is how the yaml file could look like:
 
-  `$ ssh -X <uname>@albedo0.dmawi.de`
+  ```yaml
+.... Paul will keep going here later.
+  ```
 
 </details>
-
