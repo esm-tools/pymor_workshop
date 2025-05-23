@@ -20,7 +20,7 @@ The `CO2f` variable defined in these files, map to `fgco2` in CMIP tables (`Omon
 
 Let's imagine you have produced the data, and that you know that the `CO2f` variable's unit is `mmolC/m2/d`. The units for `fgco2` in CMIP tables is `kg/m2/s`.
 
-To simulate wrong units in source files, the units in files `xCO2f_fesom_mon*.nc` are set to `mol/m2/d`.
+To simulate incorrect units (units that cannot be interpreted by Pymor) in source files, the units in files `xCO2f_fesom_mon*.nc` are set to `mol/m2/d`. These units are "incorrect" because Pymor needs to be made aware of the chemical composition before it can automatically convert moles to kg.
 This means, we have tell Pymor tool the correct units by setting it in `unit_conversion/units-example.yaml` file. This is done by using the parameter `model_unit`.
 
 # Exercise
