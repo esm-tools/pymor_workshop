@@ -22,7 +22,10 @@ $ cd work
   * Pymor @siligam 
     * What is Pymor?
     * Main Pymor features
-  * Demo: check that pymor works and show cli (`pymor --help`, `pymor compute --help` ...) @pgierz 
+  * Demo: check that pymor works and show cli (`pymor --help`, `pymor compute --help` ...) @pgierz
+  * Time to resolve installation problems @pgierz
+    * Have you installed Pymor inside a conda environment named `pymor` already?
+    * Can you run `pymor --help` and other commands?
 ### 2. Basic yaml syntax
   * Description of the most basic features of pymor @pgierz 
   * Exercise: basic (first part only one variable, second part 2 variables with common parameters controlled in the `inherit` key) @pgierz 
