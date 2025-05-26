@@ -10,7 +10,7 @@ pymor:
   use_flox: True
   dask_cluster: "slurm"
   dask_cluster_scaling_mode: fixed
-  fixed_jobs: 1
+  dask_cluster_scaling_fixed_jobs: 1
 rules:
   - name: fgco2
     inputs:
@@ -18,10 +18,6 @@ rules:
         pattern: CO2f_fesom_mon_.*nc
     cmor_variable: fgco2
     model_variable: CO2f
-    # timesteps to pack in a file. Examples: 6M, 2Y, 10Y
-    # MODIFY THIS PARAMETER
-    file_timespan: "6M"
-    # table_id: Omon
     grid_file: /pool/data/AWICM/FESOM1/MESHES/core/griddes.nc
     mesh_path: /pool/data/AWICM/FESOM1/MESHES/core
     output_directory: .
