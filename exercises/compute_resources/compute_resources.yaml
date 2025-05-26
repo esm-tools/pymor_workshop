@@ -5,9 +5,8 @@ general:
 pymor:
   warn_on_no_rule: False
   dask_cluster: slurm
-  dask_cluster_scaling_mode: fixed #TODO
-  dask_cluster_scaling_fixed_jobs: 1 #TODO
-  #fixed_jobs: 1 #TODO
+  dask_cluster_scaling_mode: fixed # TODO: Change this during the exercise
+  dask_cluster_scaling_fixed_jobs: 1 #TODO: Change this during the exercise
 
 rules:
   - name: "linear trend example"
