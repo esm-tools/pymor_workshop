@@ -18,6 +18,7 @@ rules:
         pattern: CO2f_fesom_mon_.*nc
     cmor_variable: fgco2
     model_variable: CO2f
+    table_id: Omon
     grid_file: /pool/data/AWICM/FESOM1/MESHES/core/griddes.nc
     mesh_path: /pool/data/AWICM/FESOM1/MESHES/core
     output_directory: .
