@@ -1,5 +1,5 @@
 general:
-  name: "incorrect_units"
+  name: "dimensionless_units"
   cmor_version: "CMIP6"
   mip: "CMIP"
   CMIP_Tables_Dir: "../../cmip6-cmor-tables/Tables"
@@ -11,25 +11,23 @@ pymor:
   dask_cluster: slurm
   dask_cluster_scaling_mode: fixed
   fixed_jobs: 1
+  # FIX the following by adding dimensionless_table.yaml entry
+  dimensionless_mapping_table:  <FILLME>
 rules:
-  # override incorrect units in source data files.
-  - name: xfgco2
+  - name: Salinity of the Ocean
+    description: "Here is some text for humans. It isn't used anywhere."
     inputs:
       - path: ../data
-        pattern: xCO2f_fesom_mon_.*nc
-    cmor_variable: fgco2
-    model_variable: CO2f
-    # UNITS IN DATA FILE ARE WRONG.
-    # PROVIDE CORRECT UNITS USING `model_unit` parameter.
-    # UNITS to set "mmolC/m2/d"
-    table_id: Omon
+        pattern: so_fesom_.*nc
+    cmor_variable: so
+    model_variable: so
     output_directory: .
+    table_id: Omon
     variant_label: r1i1p1f1
     experiment_id: piControl
     source_id: AWI-CM-1-1-HR
-    model_component: ocnBgchem
     grid_label: gn
-
+    model_component: ocean
 # Settings for using dask-distributed
 distributed:
   worker:
