@@ -67,19 +67,20 @@ Note that you will need to modify the `pymor-basic.slurm` file to match your acc
 
 <details>
   <summary>Solution</summary>
+  
   ```diff
-  #!/bin/bash -e
-  #SBATCH --job-name=pymorize-controller  # <<< This is the main job, it will launch subjobs if you have Dask enabled.
+    #!/bin/bash -e
+    #SBATCH --job-name=pymorize-controller  # <<< This is the main job, it will launch subjobs if you have Dask enabled.
   - #SBATCH --account=ab0246                # <<< Adapt this to your computing account!
   + #SBATCH --account=<YOUR_ACCOUNT>        # <<< Adapt this to your computing account!
-  #SBATCH --partition=compute
-  #SBATCH --nodes=1
-  #SBATCH --time=00:30:00                 # <<< You may need more time, adapt as needed!
+    #SBATCH --partition=compute
+    #SBATCH --nodes=1
+    #SBATCH --time=00:30:00                 # <<< You may need more time, adapt as needed!
   + clause for conda activate ...
 
   - cd /work/ab0246/a270077/SciComp/Projects/pymor-workshop/exercises/basic/
   + cd <YOUR_FOLDER>
-  which pymor
-  time pymor process basic.yaml 
+    which pymor
+    time pymor process basic.yaml 
   ```
 </details>
