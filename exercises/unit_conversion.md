@@ -21,14 +21,16 @@ The exercises covers the following topics:
 
 # Exercise 1: Chemical name in units
 
-Exercise folder: `./unit_conversion`
-Exercise files: `./unit_conversion/units-example.yaml`, `./unit_conversion/units-example.slurm` 
-Data: `./data/CO2f_fesom_mon*.nc`
+```yaml
+EXERCISE FOLDER: unit_conversion
+EXERCISE FILES: units-example.yaml, units-example.slurm
+DATA: CO2f_fesom_mon*.nc
+```
 
 The `CO2f` variable defined in these files, map to `fgco2` in CMIP tables (`Omon` table and `Oyr` table).
 The units for `CO2f` is `mmolC/m2/d`.  The units for `fgco2` in CMIP tables is `kg/m2/s`.
 
-1. Task: Verify the units in data and in tables by executing the following commands
+  1. TASK: Verify the units in data and in tables by executing the following commands
 
   ```bash
   # change directory to exercise folder
@@ -36,7 +38,22 @@ The units for `CO2f` is `mmolC/m2/d`.  The units for `fgco2` in CMIP tables is `
   
   # grep for units in source file
   ncdump -h data/CO2f_fesom_mon_30010101.nc | grep units
+  ```
   
+  <details>
+    <summary>Expected output</summary>
+    
+  ```shell
+    time:units = "seconds since 3001-01-01 0:0:0" ;
+    CO2f:units = "mmolC/m2/d" ;
+  ```
+  </details>
+
+---
+
+  2. TASK: Verify the units in CMIP tables
+
+  ```bash
   # units defined in CMIP6_Omon table
   jq '.variable_entry.fgco2.units' ../cmip6-cmor-tables/Tables/CMIP6_Omon.json 
   
@@ -44,34 +61,61 @@ The units for `CO2f` is `mmolC/m2/d`.  The units for `fgco2` in CMIP tables is `
   jq '.variable_entry.fgco2.units' ../cmip6-cmor-tables/Tables/CMIP6_Oyr.json 
   ```
 
+  <details>
+    <summary>Expected output</summary>
+    
+  ```shell
+    "kg m-2 s-1"
+  ```
+  </details>
+
+---
+
+  3. TASK: submit the job
+
 As Pymor can understand unit `molC` and can convert to `kg`, the next step submit the job.
-
-2. Task: submit the job
-
   ```bash
   cd unit_conversion
   sbatch units-example.slurm
   ```
 
-3. Task: Verify the units in cmorized data
+---
 
+  4. TASK: Verify the units in cmorized data
+
+  ```bash
+  ncdump -h fgco2_Omon_AWI-AWI-CM-1-1-HR_piControl_r1i1p1f1_gn_300101-300112.nc | grep units
+  ```
+
+  <details>
+    <summary>Expected output</summary>
+    
+  ```shell
+    units:                 kg m-2 s-1
+  ```
+  </details>
+
+---
 
 # Exercise 2: Incorrect units in source files
 
-Exercise folder: `./unit_conversion`
-Exercise files: `./unit_conversion/incorrect_units.yaml`, `./unit_conversion/incorrect_units.slurm` 
-Data: `./data/xCO2f_fesom_mon*.nc`
-
+```yaml
+EXERCISE FOLDER: unit_conversion
+EXERCISE FILES: incorrect_units.yaml, incorrect_units.slurm
+DATA: xCO2f_fesom_mon*.nc
+```
 
 To simulate incorrect units (units that cannot be interpreted by Pymor) in
 source files, the units in files `xCO2f_fesom_mon*.nc` are set to
 `mol/m2/d`. These units are "incorrect" because Pymor needs to be made aware of
 the chemical composition before it can automatically convert moles to `kg`.
 This means, we have tell Pymor tool the correct units by setting it in
-`unit_conversion/incorrect_units.yaml` file. This is done by using the parameter
+`incorrect_units.yaml` file. This is done by using the parameter
 `model_unit`.
 
-1. Task: check the units in source file
+---
+
+  1. TASK: check the units in source file
 
   ```bash
   # change directory to exercise folder
@@ -81,10 +125,22 @@ This means, we have tell Pymor tool the correct units by setting it in
   ncdump -h data/xCO2f_fesom_mon_30060101.nc | grep units
   ```
 
-2. Add correct units are defined in `unit_conversion/incorrect_units.yaml` file.
+  <details>
+    <summary>Expected output</summary>
+    
+  ```shell
+    time:units = "seconds since 3006-01-01 0:0:0" ;
+    xCO2f:units = "mol/m2/d" ;
+  ```
+  </details>
+
+---
+
+  2. TASK: Add correct units are defined in `incorrect_units.yaml` file.
    ```yaml
    model_unit: "mmolC/m2/d"
    ```
+   
    <details>
      <summary>Solution</summary>
 
@@ -101,17 +157,22 @@ This means, we have tell Pymor tool the correct units by setting it in
      ```
    </details>
 
-2. Task: Submit the compute job
+---
+
+  3. TASK: Submit the compute job
 
   ```bash
   cd unit_conversion
   sbatch incorrect_units.slurm
   ```
 
-3. Task: Once the job is finished, grep the log file for unit conversion details.
+---
+
+  4. TASK: Once the job is finished, grep the log file for unit conversion details.
    ```bash
    grep -i "mmolC" $(ls -rtd logs/pymor-process* | tail -n 1 )
    ```
+   
    <details>
      <summary>Expected output</summary>
 
@@ -121,10 +182,13 @@ This means, we have tell Pymor tool the correct units by setting it in
      ```
    </details>
 
-4. Verify that the output files have correct units.
+---
+
+  5. TASK: Verify that the output files have correct units.
    ```bash
    ncdump -h fgco2_Omon_AWI-AWI-CM-1-1-HR_piControl_r1i1p1f1_gn_300101-300112.nc | grep units
    ```
+   
    <details>
      <summary>Expected output</summary>
 
@@ -133,6 +197,7 @@ This means, we have tell Pymor tool the correct units by setting it in
      ```
    </details>
 
+---
 
 # Exercise 3: dimensionless mapping
 
@@ -141,8 +206,9 @@ For providing an alias for dimensionless-units, use parameter
 `dimensionless_mapping_table` to set the unit mappings on the rule. The value
 for this parameter is a yaml file mapping the original unit to an alias unit.
 
+---
 
-1. Task: List dimensionless units in CMIP6 monthly table
+1. TASK: List dimensionless units in CMIP6 monthly table
 
    ```bash
    # change directory to exercise folder
@@ -184,7 +250,9 @@ for this parameter is a yaml file mapping the original unit to an alias unit.
      ```
    </details>
 
-2. Task: List sort of vague/ambigious dimensions in CMIP6 montly table
+---
+
+2. TASK: List sort of vague/ambigious dimensions in CMIP6 montly table
 
    ```bash
    jq -r '.variable_entry | to_entries[] | select(.value.units | contains("mol")) | "\(.value.out_name)\t\(.value.units)"' ../cmip6-cmor-tables/Tables/CMIP6_Omon.json | column -t
@@ -340,8 +408,9 @@ for this parameter is a yaml file mapping the original unit to an alias unit.
      ```
    </details>
    
+---
 
-3. Task: Explore the dimensionless mapping table included in Pymor.
+3. TASK: Explore the dimensionless mapping table included in Pymor.
 
    ```bash
    filepath=$(python -c "import pathlib; import pymor.data; print(str(pathlib.Path(pymor.data.__file__).parent) + '/dimensionless_mappings.yaml')")
@@ -364,17 +433,20 @@ for this parameter is a yaml file mapping the original unit to an alias unit.
    NOTE: It is **not** expected from you to create a PullRequest during
    the workshop as a task to perform.
    
-4. Task: Setting the dimensionless mapping
+---
 
+4. TASK: Setting the dimensionless mapping
 
-Exercise folder: `./unit_conversion`
-Exercise files: `./unit_conversion/dimensionless_units.yaml`, `./unit_conversion/dimensionless_units.slurm`, `./unit_conversion/dimensionless_table.yaml`
-Data: `./data/so_fesom_mon*.nc`
+```yaml
+EXERCISE FOLDER: unit_conversion
+EXERCISE FILES: dimensionless_units.yaml, dimensionless_units.slurm, dimensionless_table.yaml
+DATA: so_fesom_mon*.nc
+```
 
   - units defined in source files
   
     ```bash
-    ncdump -h so_fesom_mon_30010101.nc | grep units
+    ncdump -h ../data/so_fesom_mon_30010101.nc | grep units
     ```
     
     <details>
@@ -387,6 +459,8 @@ Data: `./data/so_fesom_mon*.nc`
     </details>
 
     Units `psu` means `pratical salinity units`. 
+
+---
 
   - units found in tables
   
@@ -402,6 +476,8 @@ Data: `./data/so_fesom_mon*.nc`
       ```
     </details>
     
+---
+
   - The dimensionless unit `0.001` can be expressed as `g/kg` to indicate `psu`.
     This mapping is already built-in into Pymor but here we want to explicitly use this mapping in cmorization process.
     
@@ -420,13 +496,30 @@ Data: `./data/so_fesom_mon*.nc`
     Note: This is not a per-rule setting. This is for whole process.
   
     The entry must be `dimensionless_mapping_table: dimensionless_table.yaml`
-  
+
+    <details>
+      <summary>Solution</summary>
+    
+    ```yaml
+    [...]
+    pymor:
+      dimensionless_mapping_table: dimensionless_table.yaml
+    [...]
+    ```
+    </details> 
+
+---
+
   - Submit the job
   
   ```bash
   sbatch dimensionless_units.slurm
   ```
   
-5. Verify the units in the output files.
+---
+
+5. TASK: Verify the units in the output files.
 
   The units must be `0.001`
+
+---
