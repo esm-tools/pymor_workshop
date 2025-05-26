@@ -9,4 +9,4 @@ module load python3
 eval "$(conda shell.bash hook)"
 conda activate pymor
 which pymor
-time pymor process basic.yaml 
+time pymor process compute_resources.yaml
