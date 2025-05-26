@@ -12,12 +12,17 @@ pymor:
   dask_cluster_scaling_mode: fixed
   fixed_jobs: 1
 rules:
-  - name: fgco2
+  # override incorrect units in source data files.
+  - name: xfgco2
     inputs:
       - path: ../data
-        pattern: CO2f_fesom_mon_.*nc
+        pattern: xCO2f_fesom_mon_.*nc
     cmor_variable: fgco2
     model_variable: CO2f
+    # UNITS IN DATA FILE ARE WRONG.
+    # PROVIDE CORRECT UNITS USING `model_unit` parameter.
+    # UNITS to set "mmolC/m2/d"
+    table_id: Omon
     output_directory: .
     variant_label: r1i1p1f1
     experiment_id: piControl
