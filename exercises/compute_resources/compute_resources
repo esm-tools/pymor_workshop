@@ -1,35 +1,29 @@
 general:
-  name: "adjust-timestamp-example"
-  cmor_version: "CMIP6"
-  mip: "CMIP"
-  CMIP_Tables_Dir: "/work/ab0995/a270243/pymor/cmip6-cmor-tables/Tables"
-  CV_Dir: "/work/ab0995/a270243/pymor/cmip6-cmor-tables/CMIP6_CVs"
+  cmor_version: CMIP6
+  CMIP_Tables_Dir: /work/ab0995/a270243/pymor_workshop/cmip6-cmor-tables/Tables/
+  CV_Dir: /work/ab0995/a270243/pymor_workshop/cmip6-cmor-tables/CMIP6_CVs/
 pymor:
-  # parallel: True
   warn_on_no_rule: False
-  use_flox: True
-  dask_cluster: "slurm"
-  dask_cluster_scaling_mode: fixed
-  fixed_jobs: 1
+  dask_cluster: slurm
+  dask_cluster_scaling_mode: fixed #TODO
+  dask_cluster_scaling_fixed_jobs: 1 #TODO
+  #fixed_jobs: 1 #TODO
+
 rules:
-  - name: fgco2
-    inputs:
-      - path: ../data/
-        pattern: CO2f_fesom_mon_.*nc
-    cmor_variable: fgco2
-    model_variable: CO2f
-    # adjust_timestamp options: first, mid, last, literal offset like 14D,
-    # or floating point number between 0 and 1.
-    # MODIFY THIS PARAMETER
-    adjust_timestamp: first
-    grid_file: /pool/data/AWICM/FESOM1/MESHES/core/griddes.nc
-    mesh_path: /pool/data/AWICM/FESOM1/MESHES/core
-    output_directory: .
-    variant_label: r1i1p1f1
-    experiment_id: piControl
+  - name: "linear trend example"
+    cmor_variable: tas 
+    experiment_id: "piControl"
+    grid_label: "gn"
+    model_component: "atmos"
+    model_variable: tsurf
+    output_directory: "."
     source_id: AWI-CM-1-1-HR
-    model_component: ocnBgchem
-    grid_label: gn
+    table_name: "Amon"
+    variant_label: "r1i1p1f1"
+    inputs:
+      - pattern: "modelA_temp_....0101.nc"
+        path: "../data"
+
 # Settings for using dask-distributed
 distributed:
   worker:
@@ -44,9 +38,9 @@ distributed:
 # SLURM-specific settings for launching workers
 jobqueue:
   slurm:
-    name: pymor-worker
+    name: pymorize-worker
     queue: compute # SLURM queue/partition to submit jobs
-    account: ab0246 # SLURM project/account name
+    account: ab0995 # SLURM project/account name
     cores: 4 # Number of cores per worker
     memory: 128GB # Memory per worker
     walltime: '00:30:00' # Maximum walltime per job
@@ -68,5 +62,5 @@ jobqueue:
     job-cpu: 128
     job-mem: 256GB
     # worker-command: dask-worker
-    processes: 4 # Limited by memory per worker!
+    processes: 32 # Limited by memory per worker!
     # scheduler-command: dask-scheduler
