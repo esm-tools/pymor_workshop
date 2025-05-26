@@ -5,7 +5,18 @@ After everything is installed, it is time to CMORize our first dataset!
 
 We will start by using example data from a fake atmosphere model and produce `tas` for `Amon`.
 
-First, you'll need to write or modify the basic yaml file to load up that data:
+First, you'll need to write or modify the basic yaml file to load up that data. Open up a file
+called `basic.yaml`, and add the following keys:
+* `general`: this will hold settings for which cmor version is used
+* `pymor`: this will hold settings for the pymor tool itself
+* `rules`: this will be a list, defining which variables are processed
+* `pipelines`: this will also be a list, defining which steps to take to process the data
+
+Configure `pymor` to use:
+* `CMIP6` settings
+* One rule to process the model variable `"tsurf"` into the cmor variable `"tas"`
+* Use the `Amon` table
+* Files have the pattern "modelA_temp_????0101.nc", where ???? is a year stamp.
 
 <details>
   <summary>Solution</summary>
