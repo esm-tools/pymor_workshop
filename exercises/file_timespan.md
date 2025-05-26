@@ -3,7 +3,7 @@
 `file_timespan` parameter controls how many time steps are packed into a single file.
 The default behavior is follow the same timespan as the input files. That means the same number of output files are generated as input files.
 
-options for this parameter: `6MS`, `1YS`, `10YS`
+example options for this parameter: `6MS`, `1YS`, `10YS`
 alternatively, these can also be expressed in days: `180D`, `365D`, `3650D`
 
 ---
