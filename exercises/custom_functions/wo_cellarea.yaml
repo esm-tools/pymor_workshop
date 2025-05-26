@@ -8,7 +8,7 @@ pymor:
   # parallel: True
   warn_on_no_rule: False
   use_flox: True
-  dask_cluster: "slurm"
+  dask_cluster: "local"
   dask_cluster_scaling_mode: fixed
   fixed_jobs: 2
 rules:
@@ -18,8 +18,6 @@ rules:
         pattern: wo_fesom_.*nc
     cmor_variable: wmo
     model_variable: wo
-    grid_file: /pool/data/AWICM/FESOM1/MESHES/core/griddes.nc
-    mesh_path: /pool/data/AWICM/FESOM1/MESHES/core
     output_directory: .
     variant_label: r1i1p1f1
     experiment_id: piControl
@@ -34,9 +32,7 @@ pipelines:
     steps:
       - "pymor.core.gather_inputs.load_mfdataset"
       - "pymor.std_lib.generic.get_variable"
-      - "script://./wo_cellarea.py:nodes_to_levels"
       - "pymor.std_lib.timeaverage.compute_average"
-      - "script://./wo_cellarea.py:weight_by_cellarea_and_density"
       - "pymor.std_lib.units.handle_unit_conversion"
       - "pymor.std_lib.setgrid.setgrid"
       - "pymor.std_lib.global_attributes.set_global_attributes"
