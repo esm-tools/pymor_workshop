@@ -15,5 +15,5 @@ module load python3
 source $(conda info --base)/etc/profile.d/conda.sh
 conda activate pymor
 prefect server start -b
-time pymorize process dimensionless_units.yaml
+time pymor process dimensionless_units.yaml
 prefect server stop

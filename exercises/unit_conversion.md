@@ -74,6 +74,7 @@ The units for `CO2f` is `mmolC/m2/d`.  The units for `fgco2` in CMIP tables is `
   3. TASK: submit the job
 
 As Pymor can understand unit `molC` and can convert to `kg`, the next step submit the job.
+
   ```bash
   cd unit_conversion
   sbatch units-example.slurm
@@ -169,6 +170,7 @@ This means, we have tell Pymor tool the correct units by setting it in
 ---
 
   4. TASK: Once the job is finished, grep the log file for unit conversion details.
+  
    ```bash
    grep -i "mmolC" $(ls -rtd logs/pymor-process* | tail -n 1 )
    ```
@@ -185,6 +187,7 @@ This means, we have tell Pymor tool the correct units by setting it in
 ---
 
   5. TASK: Verify that the output files have correct units.
+  
    ```bash
    ncdump -h fgco2_Omon_AWI-AWI-CM-1-1-HR_piControl_r1i1p1f1_gn_300101-300112.nc | grep units
    ```
@@ -432,6 +435,8 @@ for this parameter is a yaml file mapping the original unit to an alias unit.
 
    NOTE: It is **not** expected from you to create a PullRequest during
    the workshop as a task to perform.
+  
+   Additional notes: https://pymorize.readthedocs.io/en/latest/cookbook.html#working-with-dimensionless-units
    
 ---
 

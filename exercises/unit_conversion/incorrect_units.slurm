@@ -15,5 +15,5 @@ module load python3
 source $(conda info --base)/etc/profile.d/conda.sh
 conda activate pymor
 prefect server start -b
-time pymorize process incorrect_units.yaml
+time pymor process incorrect_units.yaml
 prefect server stop
