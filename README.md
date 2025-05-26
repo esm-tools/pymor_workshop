@@ -70,30 +70,31 @@ As the data to run the exercises lives on Levante,(DKRZ), we need to setup the P
 
 The installation is done in 2 steps:
 
-  1. Clone the repository
-  2. Create a virtual environment
-
-
-### Clone the Pymor repository
-
-```bash
-work="/work/$(id -gn)/$USER"
-echo "work directory: $work"
-cd $work
-module load git
-git clone https://esm-tools/pymorize.git
-cd pymorize
-```
+  1. Create a virtual environment
+  2. Install Pymor
 
 ### Create a virtual environment
-```bash
-prefix="$work/pymor_env"
-echo "prefix directory: $prefix"
 
+**Note:** the exercises assume you have a `pymor` conda environment, so make sure when you create the environment that its name matches that.
+
+```bash
 module load python3
-conda create --prefix $prefix python=3.10
+eval "$(conda shell.bash hook)"      # Init conda without the need to add extra lines to ~/.bashrc
+conda create -n pymor python=3.10    # Create a conda environment named pymor
+```
+
+### Install Pymor
+
+```bash
 conda activate $prefix
-python -m pip install -e .[fesom]
+pip install --isolated py-cmor[dev,fesom]
+```
+
+You can then check the Pymor works by running:
+
+```bash
+pymor --version
+pymor --help
 ```
 
 For additional information, check out the following links
