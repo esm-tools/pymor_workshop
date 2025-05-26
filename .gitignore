@@ -1,0 +1,6 @@
+**/data/
+**/*.nc
+**/logs/*
+**/slurm-*.out
+**/slurm-*.err
+**/pymor_report.log

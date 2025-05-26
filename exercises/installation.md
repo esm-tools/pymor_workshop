@@ -48,3 +48,19 @@ cd $work
 git clone https://github.com/esm-tools/pymor_workshop.git
 cd pymor_workshop
 ```
+
+## Get the example data
+
+This workshop is designed for ease-of-use if you are working on DKRZ's Levante system. You can access all of the test data here:
+
+```
+/work/ab0995/a270243/pymor_workshop/exercises/data
+```
+
+If you want to be able to see the files as part of your own repository, you can make a link
+
+```bash
+pwd  # You should be in the root of the repository (`/work/$PROJECT/$USER/pymor_workshop`)
+ln -sv /work/ab0995/a270243/pymor_workshop/exercises/data ./exercises/data
+```
+
