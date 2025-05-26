@@ -86,7 +86,7 @@ conda create -n pymor python=3.10    # Create a conda environment named pymor
 ### Install Pymor
 
 ```bash
-conda activate $prefix
+conda activate pymor
 pip install --isolated py-cmor[dev,fesom]
 ```
 
