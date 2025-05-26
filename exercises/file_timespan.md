@@ -41,6 +41,17 @@ file-timespan: None, table_id: None
    <details>
     <summary>Solution</summary>
 
+    Set the following in `file-timespan-example.yaml```
+    ```yaml
+    rules:
+      - name: fgco2
+        [ ... ]
+        file_timespan: "2YS"
+        table_id: Omon
+        [ ... ]
+    ```
+
+    After running pymor the following files should have been created:
     ```bash
     fgco2_Omon_AWI-AWI-CM-1-1-HR_piControl_r1i1p1f1_gn_300101-300212.nc
     fgco2_Omon_AWI-AWI-CM-1-1-HR_piControl_r1i1p1f1_gn_300301-300412.nc
@@ -108,8 +119,8 @@ file-timespan: None, table_id: None
 
    The value of `file_timespan` should be large enough to include all time steps.
 
-    ```bash
-    file_timespan: 10YS
+    ```yaml
+        file_timespan: 10YS
     ```
    
    Setting `file_timespan` to some value requires a bit of knowlege of time-span of source data.
