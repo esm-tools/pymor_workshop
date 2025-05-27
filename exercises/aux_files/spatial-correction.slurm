@@ -5,6 +5,8 @@
 #SBATCH --nodes=1
 #SBATCH --time=00:30:00                 # <<< You may need more time, adapt as needed!
 
-cd /work/ab0246/a270077/SciComp/Projects/pymor-workshop/exercises/aux_files
-which pymor
+#loadconda
+module load python3
+source $(conda info --base)/etc/profile.d/conda.sh
+conda activate pymor
 time pymor process spatial-correction.yaml 

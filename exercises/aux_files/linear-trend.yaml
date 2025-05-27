@@ -24,7 +24,7 @@ rules:
         path: "numbers.txt"
     inputs:
       - pattern: "modelA_temp_....0101.nc"
-        path: "/work/ab0995/a270243/pymor_workshop/exercises/data"
+        path: "../data"
     pipelines:
        - "linear_trend"
 
