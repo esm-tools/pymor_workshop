@@ -16,7 +16,7 @@ Exercise folder: `temporal_frequency`
 For this exercise, `CO2f` variable with quarterly temporal frequency is used.
 As this variable maps to `fgco2` variable which is found in both monthly and yearly CMIP tables, Pymor should only consider yearly CMIP table for cmorization.
 
-submit the job (`sbatch pymorize.slurm`) and check the output
+submit the job (`sbatch pymor.slurm`) and check the output
 
 ```bash
 fgco2_Oyr_AWI-AWI-CM-1-1-HR_piControl_r1i1p1f1_gn_3001-3001.nc
@@ -30,5 +30,5 @@ fgco2_Oyr_AWI-AWI-CM-1-1-HR_piControl_r1i1p1f1_gn_3005-3005.nc
 
 1. In terminal, change into `./temporal_frequency/` directory
 2. Edit `temporal-frequency-example.yaml` file as necessary.
-3. Submit the job to slurm scheduler. `sbatch pymorize.slurm`
+3. Submit the job to slurm scheduler. `sbatch pymor.slurm`
 4. Check the output of the job.

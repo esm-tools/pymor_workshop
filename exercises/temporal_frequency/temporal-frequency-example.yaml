@@ -8,13 +8,13 @@ pymorize:
   # parallel: True
   warn_on_no_rule: False
   use_flox: True
-  dask_cluster: "slurm"
+  dask_cluster: local
   dask_cluster_scaling_mode: fixed
   fixed_jobs: 1
 rules:
   - name: fgco2
     inputs:
-      - path: ../../data/
+      - path: ../data/
         pattern: qCO2f_fesom_quaterly_.*nc
     cmor_variable: fgco2
     model_variable: CO2f

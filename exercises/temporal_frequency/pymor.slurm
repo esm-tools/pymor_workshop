@@ -15,5 +15,5 @@ module load python3
 source $(conda info --base)/etc/profile.d/conda.sh
 conda activate pymor
 prefect server start -b
-time pymorize process temporal-frequency-example.yaml
+time pymor process temporal-frequency-example.yaml
 prefect server stop
