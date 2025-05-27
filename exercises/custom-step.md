@@ -62,9 +62,9 @@ Exercise files:
       steps:
         - "pymor.core.gather_inputs.load_mfdataset"
         - "pymor.std_lib.generic.get_variable"
-        - "script://./wo_cellarea.py:nodes_to_levels"
-        - "pymor.std_lib.timeaverage.compute_average"
-        - "script://./wo_cellarea.py:weight_by_cellarea_and_density"
+        - "script://wo_cellarea.py:nodes_to_levels"
+        - "pymor.std_lib.time_average
+        - "script://wo_cellarea.py:weight_by_cellarea_and_density"
         - "pymor.std_lib.units.handle_unit_conversion"
         - "pymor.std_lib.setgrid.setgrid"
         - "pymor.std_lib.global_attributes.set_global_attributes"
@@ -81,6 +81,6 @@ To run this exercise fesom package is required. If you don't have it installed a
 
 1. In terminal, navigate to the exercise folder `./custom_functions`.
 2. Review or edit `wo_cellarea.yaml` file as necessary.
-3. Submit the job using `sbatch pymorize_wo_cellarea.slurm`.
+3. Submit the job using `sbatch pymor_wo_cellarea.slurm`.
 
 
