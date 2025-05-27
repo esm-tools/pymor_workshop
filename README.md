@@ -18,47 +18,44 @@ $ cd work
 ## Outline
 
 ### 1. Intro
-  * Workshop intro @pgierz 
+  * Workshop intro - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/aims_outline.pdf) @pgierz 
     * Aims
     * Outline
-  * Pymor @siligam 
+  * Pymor - [Slides]() @siligam 
     * What is Pymor?
     * Main Pymor features
-  * Demo: check that pymor works and show cli (`pymor --help`, `pymor compute --help` ...) @pgierz
+  * Demo: [pymor cli](https://github.com/esm-tools/pymor_workshop/blob/main/demos/cli.md) @pgierz
   * Time to resolve installation problems @pgierz
     * Have you installed Pymor inside a conda environment named `pymor` already?
     * Can you run `pymor --help` and other commands?
-### 2. Basic yaml syntax
-  * Description of the most basic features of pymor @pgierz 
-  * Exercise: basic (first part only one variable, second part 2 variables with common parameters controlled in the `inherit` key) @pgierz 
+    * Maybe you need to upgrade (`pip install --upgrade py-cmor[dev,fesom]`)
+### 2. Pymor syntax
+  * Presentation - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/yaml_syntax.pdf) @pgierz 
+  * Exercise: [Running a basic pymor process](https://github.com/esm-tools/pymor_workshop/blob/main/exercises/basic.md) @pgierz 
 ### 3. Features
 #### 3.1. Units (`module_units` and `cmor_units`)
-* Presentation
-* Exercise: wrong units in source data 
-#### 3.2. Dimensionless units mapping
-* Presentation
-* Exercise: how to contribute to dimensionless mappings yaml
-#### 3.3. Time span for output files (`file_timespan`)
-* Presentation
-* Exercise: going from 12 files (one per month) to 1 file (12 timesteps in one complete file)
-#### 3.4. Time averages
-* Presentation
-* Exercise: exercise where input is in daily and table request the frequency in months
-#### 3.5. Adjusting time stamps of steps
-* [Presentation]()
-* Exercise: [Adjust timestamp](https://github.com/esm-tools/pymor_workshop/blob/main/exercises/adjust_timestamp.md)
-#### 3.6. Control computing resources
-* Presentation (which features are available to control computing resources? Dask vs Prefect)
-* Exercise: change number of nodes used
-#### 3.7. Pipelines and custom steps
-* Presentation
-* Exercise: add a custom step
-#### 3.8. Combining model output variables
-* Presentation
-* Exercise: Custom step to add multiple variables into one
-#### 3.9. PyFESOM
-* Presentation (pyfesom and external packages)
-* Exercise: custom step using pyfesom features?
+* Presentation - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/units.pdf) @pavan
+* Exercise: [Unit conversion](https://github.com/esm-tools/pymor_workshop/blob/main/exercises/unit_conversion.md) 
+#### 3.2. Time span for output files (`file_timespan`)
+* Presentation - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/file_timespan.pdf) @pavan
+* Exercise: [File timespan](https://github.com/esm-tools/pymor_workshop/blob/main/exercises/file_timespan.md)
+#### 3.3. Time averages
+* Presentation - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/timeaverage.pdf) @pavan
+* Exercise: [Temporal frequency](https://github.com/esm-tools/pymor_workshop/blob/main/exercises/temporal_frequency.md)
+#### 3.4. Adjusting time stamps of steps
+* Exercise: [Adjust timestamp](https://github.com/esm-tools/pymor_workshop/blob/main/exercises/adjust_timestamp.md) @pavan
+#### 3.5. Control computing resources
+* Presentation - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/compute_resources.pdf) @pgierz
+* Exercise: [Costumizing your compute resources](https://github.com/esm-tools/pymor_workshop/blob/main/exercises/compute-resources.md)
+#### 3.6. Pipelines and custom steps
+* Presentation - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/pipelines_and_custom_steps.pdf) @pgierz
+* Exercise: [Add a custom step in the pipeline](https://github.com/esm-tools/pymor_workshop/blob/main/exercises/custom-step.md)
+#### 3.7. Combining model output variables
+* Presentation - [Slidex](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/combining_variables.pdf)
+* Exercise: [Using aux files](https://github.com/esm-tools/pymor_workshop/blob/main/exercises/aux_files.md)
+#### 3.8. PyFESOM
+* Presentation - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/pyfesom2_features.pdf) @pgierz
+* Exercise: [Using pyfesom2 with pymor](https://github.com/esm-tools/pymor_workshop/blob/main/exercises/pyfesom2_exercises.md)
 ### 4. Try Pymor with your data
 ### 5. Close the workshop
 
