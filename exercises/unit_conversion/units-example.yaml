@@ -2,41 +2,22 @@ general:
   name: "units-example"
   cmor_version: "CMIP6"
   mip: "CMIP"
-  CMIP_Tables_Dir: "/work/ab0995/a270243/pymorize/cmip6-cmor-tables/Tables"
-  CV_Dir: "/work/ab0995/a270243/pymorize/cmip6-cmor-tables/CMIP6_CVs"
-pymorize:
+  CMIP_Tables_Dir: "../../cmip6-cmor-tables/Tables"
+  CV_Dir: "../../cmip6-cmor-tables/CMIP6_CVs"
+pymor:
   # parallel: True
   warn_on_no_rule: False
   use_flox: True
-  dask_cluster: "slurm"
+  dask_cluster: local
   dask_cluster_scaling_mode: fixed
-  fixed_jobs: 12
+  fixed_jobs: 1
 rules:
   - name: fgco2
     inputs:
-      - path: ../data/
+      - path: ../data
         pattern: CO2f_fesom_mon_.*nc
     cmor_variable: fgco2
     model_variable: CO2f
-    grid_file: /pool/data/AWICM/FESOM1/MESHES/core/griddes.nc
-    mesh_path: /pool/data/AWICM/FESOM1/MESHES/core
-    output_directory: .
-    variant_label: r1i1p1f1
-    experiment_id: piControl
-    source_id: AWI-CM-1-1-HR
-    model_component: ocnBgchem
-    grid_label: gn
-  # Example showing wrong units in source data files.
-  - name: xfgco2
-    inputs:
-      - path: ../data/
-        pattern: xCO2f_fesom_mon_.*nc
-    cmor_variable: fgco2
-    model_variable: CO2f
-    # override units in data file
-    model_unit: "mmolC/m2/d"
-    grid_file: /pool/data/AWICM/FESOM1/MESHES/core/griddes.nc
-    mesh_path: /pool/data/AWICM/FESOM1/MESHES/core
     output_directory: .
     variant_label: r1i1p1f1
     experiment_id: piControl
