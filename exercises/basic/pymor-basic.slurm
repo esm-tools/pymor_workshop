@@ -5,6 +5,7 @@
 #SBATCH --nodes=1
 #SBATCH --time=00:30:00                 # <<< You may need more time, adapt as needed!
 
+# FIXME: You should change this path to your workshop location!
 cd /work/ab0246/a270077/SciComp/Projects/pymor-workshop/exercises/basic/
 which pymor
 time pymor process basic.yaml 
