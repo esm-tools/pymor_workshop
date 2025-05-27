@@ -2,8 +2,8 @@ general:
   name: "file-timespan-example"
   cmor_version: "CMIP6"
   mip: "CMIP"
-  CMIP_Tables_Dir: "/work/ab0995/a270243/pymor/cmip6-cmor-tables/Tables"
-  CV_Dir: "/work/ab0995/a270243/pymor/cmip6-cmor-tables/CMIP6_CVs"
+  CMIP_Tables_Dir: "../../cmip6-cmor-tables/Tables"
+  CV_Dir: "../../cmip6-cmor-tables/CMIP6_CVs"
 pymor:
   # parallel: True
   warn_on_no_rule: False
@@ -19,8 +19,7 @@ rules:
     cmor_variable: fgco2
     model_variable: CO2f
     table_id: Omon
-    grid_file: /pool/data/AWICM/FESOM1/MESHES/core/griddes.nc
-    mesh_path: /pool/data/AWICM/FESOM1/MESHES/core
+    # file_timespan: <FILLME>
     output_directory: .
     variant_label: r1i1p1f1
     experiment_id: piControl
