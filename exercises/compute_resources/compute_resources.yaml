@@ -1,0 +1,65 @@
+general:
+  cmor_version: CMIP6
+  CMIP_Tables_Dir: /work/ab0995/a270243/pymor_workshop/cmip6-cmor-tables/Tables/
+  CV_Dir: /work/ab0995/a270243/pymor_workshop/cmip6-cmor-tables/CMIP6_CVs/
+pymor:
+  warn_on_no_rule: False
+  dask_cluster: slurm
+  dask_cluster_scaling_mode: fixed # TODO: Change this during the exercise
+  dask_cluster_scaling_fixed_jobs: 1 #TODO: Change this during the exercise
+
+rules:
+  - name: "linear trend example"
+    cmor_variable: tas 
+    experiment_id: "piControl"
+    grid_label: "gn"
+    model_component: "atmos"
+    model_variable: tsurf
+    output_directory: "."
+    source_id: AWI-CM-1-1-HR
+    table_name: "Amon"
+    variant_label: "r1i1p1f1"
+    inputs:
+      - pattern: "modelA_temp_....0101.nc"
+        path: "../data"
+
+# Settings for using dask-distributed
+distributed:
+  worker:
+    memory:
+      target: 0.6 # Target 60% of worker memory usage
+      spill: 0.7 # Spill to disk when 70% of memory is used
+      pause: 0.8 # Pause workers if memory usage exceeds 80%
+      terminate: 0.95 # Terminate workers at 95% memory usage
+    resources:
+      CPU: 4 # Assign 4 CPUs per worker
+    death-timeout: 600 # Worker timeout if no heartbeat (seconds): Keep workers alive for 5 minutes
+# SLURM-specific settings for launching workers
+jobqueue:
+  slurm:
+    name: pymorize-worker
+    queue: compute # SLURM queue/partition to submit jobs
+    account: ab0995 # SLURM project/account name
+    cores: 4 # Number of cores per worker
+    memory: 128GB # Memory per worker
+    walltime: '00:30:00' # Maximum walltime per job
+    interface: ib0 # Network interface for communication
+    job-extra-directives: # Additional SLURM job options
+      - '--exclusive' # Run on exclusive nodes
+      - '--nodes=1'
+    # Worker template
+    worker-extra:
+      - "--nthreads"
+      - 4
+      - "--memory-limit"
+      - "128GB"
+      - "--lifetime"
+      - "25m"
+      - "--lifetime-stagger"
+      - "4m"
+    # How to launch workers and scheduler
+    job-cpu: 128
+    job-mem: 256GB
+    # worker-command: dask-worker
+    processes: 32 # Limited by memory per worker!
+    # scheduler-command: dask-scheduler
