@@ -65,7 +65,8 @@ def main(netcdf_file, yaml_file, output_filename):
 
     try:
         # Open the NetCDF file
-        ds = xr.open_dataset(netcdf_file)
+        time_coder = xr.coders.CFDatetimeCoder(use_cftime=True)
+        ds = xr.open_dataset(netcdf_file, decode_times=time_coder)
 
         # Create the YAML specification
         yaml_spec = create_yaml_spec(ds, output_filename)
@@ -107,7 +108,7 @@ def create_yaml_spec(ds, output_filename):
 
     # Add dimensions
     file_spec["dimensions"] = {}
-    for dim_name, dim_size in ds.dims.items():
+    for dim_name, dim_size in ds.sizes.items():
         # Check if this dimension has coordinate data
         if dim_name in ds.coords:
             coord_data = ds[dim_name].values
@@ -156,21 +157,7 @@ def create_yaml_spec(ds, output_filename):
 
         # Use simple normal distribution by default
         var_spec["distribution"] = "normal"
-
-        # Set basic parameters based on data range
-        data = var_data.values
-        valid_data = (
-            data[~np.isnan(data)]
-            if hasattr(data, "mask") or np.isnan(data).any()
-            else data
-        )
-
-        if len(valid_data) > 0:
-            mean_val = float(np.mean(valid_data))
-            std_val = float(np.std(valid_data)) if len(valid_data) > 1 else 1.0
-            var_spec["params"] = {"mean": mean_val, "std": std_val}
-        else:
-            var_spec["params"] = {"mean": 0.0, "std": 1.0}
+        var_spec["params"] = {"mean": 0.0, "std": 1.0}
 
         # Add attributes
         if var_data.attrs:
