@@ -13,6 +13,8 @@ Make a folder to work in, for example:
 $ cd work
 ```
 
+During the live workshop, you'll be able to use the QOS `--qos=training` in DKRZ's HPC, to gain priority in the slurm queue. To benefit from this make sure you add this to your `salloc` or `sbatch` commands, or to the `#SBATCH` headers of the scripts.
+
 ---
 
 ## Outline
