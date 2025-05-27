@@ -12,7 +12,7 @@ The dimensions of the variables `wo` and `griddes.cell_area` are as follows:
   - `wo(time, nodes_3d=3668773)`
   - `griddes.cell_area(ncells=126859)`
 
-As there is mismatch in dimensions, we need to transform `wo` to `(time, level, ncells)`. That is transforming the dimension `nodes_3d` to `(level, ncells=126859)`. This is done by `nodes_to_levels` function and it needs to be inserted into the pipeline.
+As there is mismatch in dimensions, we need to transform `wo` to `(time, level, ncells)`. That is transforming the dimension `nodes_3d` to `(level, ncells=126859)`. This is done by `nodes_to_levels` function and it needs to be inserted into the pipeline, which at the same time calls `pymor.fesom_1p4.nodes_to_levels`, a function that comes with the installation of the `fesom` extra (when you did `pip install py-cmor.[fesom]`).
 
 The seconds step is to apply reference density per cell area to `wo`. This is done by `weight_by_cellarea_and_density` function and it needs to be inserted into the pipeline as well.
 
