@@ -1,6 +1,6 @@
 # Temporal frequency
 
-One of the criteria to perform cmorization is that the temporal frequency of the source data must be **finer** than the frequency defined in the matching CMIP table.
+One of the criteria to perform cmorization is that the temporal frequency of the source data must be equal or **finer** than the frequency defined in the matching CMIP table. If it's equal, no temporal operation needs to be performed. If it is finer, an average needs to be computed over the larger frequency specified in the standard.
 
 For instance, if variable in source data matches monthly CMIP table, then it is required that source data temporal frequency is at least monthly. If it is coarser than monthly (say, quarterly or annual), then it is not possible to perform cmorization.
 
