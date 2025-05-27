@@ -1,22 +1,38 @@
 # Add a custom step in the pipeline
 
-In this exercise, we will look into how to add a custom step to the pipeline, to compute the CMOR-compliant "Upward Ocean Mass Transport" dataset from `fesom` model data, as specified in `cmip6-cmor-tables/Tables/CMIP6_Omon.json`. The units for such a dataset should be `kg s-1`.
+Adapted from an example by @chrisdane
 
-The vertical velocity component 𝑤 (saved as ``wo`` in fesom) with units `m s-1`, is scaled by the
-cell area (`m2`) as well as a reference water density 𝜌0 = 1035 kg m−3.
+In this exercise, we will look into how to add a custom step to the pipeline, to
+compute the CMOR-compliant "Upward Ocean Mass Transport" dataset from `fesom`
+model data, as specified in `cmip6-cmor-tables/Tables/CMIP6_Omon.json`. The
+units for such a dataset should be `kg s-1`.
 
-So the task is to apply reference density to dataset. The cell area information is available in the griddes file.
+The vertical velocity component 𝑤 (saved as ``wo`` in fesom) with units `m s-1`,
+is scaled by the cell area (`m2`) as well as a reference water density 𝜌0 = 1035
+kg m−3.
+
+So the task is to apply reference density to dataset. The cell area information
+is available in the griddes file.
 
 The dimensions of the variables `wo` and `griddes.cell_area` are as follows:
 
   - `wo(time, nodes_3d=3668773)`
   - `griddes.cell_area(ncells=126859)`
 
-As there is mismatch in dimensions, we need to transform `wo` to `(time, level, ncells)`. That is transforming the dimension `nodes_3d` to `(level, ncells=126859)`. This is done by `nodes_to_levels` function and it needs to be inserted into the pipeline, which at the same time calls `pymor.fesom_1p4.nodes_to_levels`, a function that comes with the installation of the `fesom` extra (when you did `pip install py-cmor.[fesom]`).
+As there is mismatch in dimensions, we need to transform `wo` to `(time, level,
+ncells)`. That is transforming the dimension `nodes_3d` to `(level,
+ncells=126859)`. This is done by `nodes_to_levels` function and it needs to be
+inserted into the pipeline, which at the same time calls
+`pymor.fesom_1p4.nodes_to_levels`, a function that comes with the installation
+of the `fesom` extra (when you did `pip install py-cmor.[fesom]`).
 
-The seconds step is to apply reference density per cell area to `wo`. This is done by `weight_by_cellarea_and_density` function and it needs to be inserted into the pipeline as well.
+The seconds step is to apply reference density per cell area to `wo`. This is
+done by `weight_by_cellarea_and_density` function and it needs to be inserted
+into the pipeline as well.
 
-The `nodes_to_levels` and `weight_by_cellarea_and_density` functions are defined in `wo_cellarea.py` file.
+The `nodes_to_levels` and `weight_by_cellarea_and_density` functions are
+provided to you for the exercise, in the
+`exercises/custom_functions/wo_cellarea.py` file.
 
 The syntax to include custom functions in the pipeline is as follows:
 
@@ -30,23 +46,24 @@ For example:
 
 ---
 
-Exercise folder: `custom_functions`
 
-Exercise files:
-
-- `wo_cellarea.yaml`
-- `wo_cellarea.py`
+```yaml
+Exercise folder: custom_functions
+Exercise files: wo_cellarea.yaml, wo_cellarea.py
+```
 
 # Exercise
 
-1. Ensure `grid_file` and `mesh_path` parameters are set in `wo_cellarea.yaml` as they are required in computation inside custom functions.
+1. Ensure `grid_file` and `mesh_path` parameters are set in `wo_cellarea.yaml`
+   as they are required in computation inside custom functions.
 
   ```yaml
   grid_file: /pool/data/AWICM/FESOM1/MESHES/core/griddes.nc
   mesh_path: /pool/data/AWICM/FESOM1/MESHES/core
   ```
 
-2. Ensure custom functions defined in `wo_cellarea.py` have the following signature:
+2. Ensure custom functions defined in `wo_cellarea.py` have the following
+   signature:
 
   ```python
   def custom_function(data, rule):
@@ -54,7 +71,8 @@ Exercise files:
       return data
   ```
 
-3. Ensure these custom functions are inserted into the pipeline in `wo_cellarea.yaml`.
+3. Ensure these custom functions are inserted into the pipeline in
+   `wo_cellarea.yaml`.
 
   ```yaml
   pipelines:
@@ -75,7 +93,8 @@ Exercise files:
 
 ### Note
 
-To run this exercise fesom package is required. If you don't have it installed already, you can install it using `pip install py-cmor[fesom]`.
+To run this exercise fesom package is required. If you don't have it installed
+already, you can install it using `pip install py-cmor[fesom]`.
 
 # Workflow
 
