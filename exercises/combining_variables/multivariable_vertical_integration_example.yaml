@@ -23,9 +23,9 @@ rules:
   - name: Primary Organic Carbon Production
     description: "Primary organic production. This example has several special cases!"
     inputs:
-      - path: "/work/ab0995/a270243/pymor_workshop/data/"
+      - path: "../data/"
         pattern: diags3d01_.*.nc
-      - path: "/work/ab0995/a270243/pymor_workshop/data/"
+      - path: "../data/"
         pattern: diags3d02_.*.nc
     grid_file: /pool/data/AWICM/FESOM1/MESHES/core/griddes.nc
     mesh_path: /pool/data/AWICM/FESOM1/MESHES/core
@@ -69,7 +69,7 @@ jobqueue:
   slurm:
     name: pymor-worker
     queue: compute # SLURM queue/partition to submit jobs
-    account: ab0246 # SLURM project/account name
+    account:  # SLURM project/account name
     cores: 4 # Number of cores per worker
     memory: 128GB # Memory per worker
     walltime: '00:30:00' # Maximum walltime per job
