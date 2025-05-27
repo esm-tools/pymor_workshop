@@ -1,5 +1,5 @@
 #!/bin/bash -e
-#SBATCH --job-name=pymorize-controller  # <<< This is the main job, it will launch subjobs if you have Dask enabled.
+#SBATCH --job-name=pymor-controller  # <<< This is the main job, it will launch subjobs if you have Dask enabled.
 #SBATCH --account=                      # <<< Adapt this to your computing account!
 #SBATCH --partition=compute
 #SBATCH --nodes=1

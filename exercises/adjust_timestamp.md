@@ -108,6 +108,6 @@ cdo -s showtimestamp ../data/CO2f_fesom_mon_30010101.nc | xargs -n1 echo
 
 1. In terminal, change into `./adjust_timestamp/` directory
 2. Edit `adjust-timestamp-example.yaml` file as necessary.
-3. Submit the job to slurm scheduler. `sbatch pymorize.slurm`
+3. Submit the job to slurm scheduler. `sbatch pymor.slurm`
 4. Load `cdo` into environment (if not already loaded) `module load cdo`
 5. Use `cdo` to investigate the timestamp in a file `cdo -s showtimestamp <filename>.nc`

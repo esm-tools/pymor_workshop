@@ -40,7 +40,7 @@ def cleanup():
             rm_file(item)
         if item.is_file() and item.name.endswith("nc"):
             rm_file(item)
-        if item.name == "pymorize_report.log":
+        if item.name == "pymor_report.log":
             rm_file(item)
         if item.is_dir() and item.name == "logs":
             rm_dir(item)

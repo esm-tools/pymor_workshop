@@ -70,7 +70,7 @@ Note that you will need to modify the `pymor-basic.slurm` file to match your acc
   
   ```diff
     #!/bin/bash -e
-    #SBATCH --job-name=pymorize-controller  # <<< This is the main job, it will launch subjobs if you have Dask enabled.
+    #SBATCH --job-name=pymor-controller  # <<< This is the main job, it will launch subjobs if you have Dask enabled.
   - #SBATCH --account=                      # <<< Adapt this to your computing account!
   + #SBATCH --account=<YOUR_ACCOUNT>        # <<< Adapt this to your computing account!
     #SBATCH --partition=compute

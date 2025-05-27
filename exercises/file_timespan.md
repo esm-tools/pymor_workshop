@@ -133,4 +133,4 @@ file-timespan: None, table_id: None
 
 1. In terminal, change into `./file_timespan/` directory
 2. Edit `file-timespan-example.yaml` file as necessary.
-3. Submit the job to slurm schedular. `sbatch pymorize.slurm`
+3. Submit the job to slurm schedular. `sbatch pymor.slurm`

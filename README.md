@@ -100,7 +100,7 @@ pymor --help
 For additional information, check out the following links
 
 - Creating Virtual environments on Levante: [Python environment locations](https://docs.dkrz.de/blog/2021/conda_path.html#python-environment-locations).
-- Installing Pymor: [Pymor documentation](https://pymorize.readthedocs.io/en/latest/installation.html).
+- Installing Pymor: [Pymor documentation](https://pymor.readthedocs.io/en/latest/installation.html).
 
 
 ## Pymor workshop repository

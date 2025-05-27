@@ -53,7 +53,7 @@ jobqueue:
   # SLURM-specific settings for launching workers
   jobqueue:
     slurm:
-      name: pymorize-worker
+      name: pymor-worker
       queue: compute # SLURM queue/partition to submit jobs
       account: ab0995 # SLURM project/account name
       cores: 4 # Number of cores per worker
