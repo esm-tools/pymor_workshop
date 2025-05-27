@@ -10,7 +10,7 @@ pymor:
   use_flox: True
   dask_cluster: local
   dask_cluster_scaling_mode: fixed
-  fixed_jobs: 2
+  dask_cluster_scaling_fixed_jobs: 1
 rules:
   - name: cellarea_wo
     inputs:
