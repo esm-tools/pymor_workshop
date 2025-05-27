@@ -4,3 +4,4 @@
 **/slurm-*.out
 **/slurm-*.err
 **/pymor_report.log
+**/.DS_Store
