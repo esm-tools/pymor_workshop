@@ -28,7 +28,7 @@ DATA: CO2f_fesom_mon*.nc
 ```
 
 The `CO2f` variable defined in these files, map to `fgco2` in CMIP tables (`Omon` table and `Oyr` table).
-The units for `CO2f` is `mmolC/m2/d`.  The units for `fgco2` in CMIP tables is `kg/m2/s`.
+The units for `CO2f` is `mmolC/m2/d`.  The unit for `fgco2` in CMIP tables is `kg/m2/s`.
 
   1. TASK: Verify the units in data and in tables by executing the following commands
 
@@ -205,9 +205,17 @@ This means, we have tell Pymor tool the correct units by setting it in
 # Exercise 3: dimensionless mapping
 
 
+Some of the units as described in the tables of the CMOR convention are physically ambiguous, and require
+a prior knowledge and interpretation of the variable description. Let's take for example, the sea water salinity
+(`so`) where its units are defined in the CMOR standard as `0.001`. This is clearly a ratio but whether this ratio
+is express in mass or volume is not obvious. To achieve a general conversion of units from model data to standards
+we need to define a mapping for such variables, telling Pymor which dimensionless units map to a more phycically
+complete definition (in the case of the salinity `0.001` maps to `g/kg`).
+
 For providing an alias for dimensionless-units, use parameter
 `dimensionless_mapping_table` to set the unit mappings on the rule. The value
-for this parameter is a yaml file mapping the original unit to an alias unit.
+for this parameter is a yaml file mapping the original unit to an alias unit. If this parameter
+is not indicated, the default `dimensionless_mappings.yaml` provided with Pymor is used.
 
 ---
 
@@ -431,12 +439,13 @@ for this parameter is a yaml file mapping the original unit to an alias unit.
    parameter.
    
    To make newly added entries available for everyone, please create a
-   PullRequest using the modified built-in mapping table.
+   PullRequest in the [Pymor repo](https://github.com/esm-tools/pymor/pulls)
+   using the modified built-in mapping table.
 
    NOTE: It is **not** expected from you to create a PullRequest during
    the workshop as a task to perform.
   
-   Additional notes: https://pymorize.readthedocs.io/en/latest/cookbook.html#working-with-dimensionless-units
+   Additional notes: https://pymor.readthedocs.io/en/latest/cookbook.html#working-with-dimensionless-units
    
 ---
 
@@ -463,7 +472,7 @@ DATA: so_fesom_mon*.nc
       ```
     </details>
 
-    Units `psu` means `pratical salinity units`. 
+    Units `psu` means `practical salinity units`. 
 
 ---
 
