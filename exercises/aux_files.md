@@ -3,6 +3,11 @@
 We want to explore auxiliary files in these exercises, which allow you to load up contextual information
 alongside your data. 
 
+```yaml
+Exercise folder: aux_files
+Exercise files: linear-trend.yaml, add_linear_trend.py, spatial-correction.yaml, spatial_correction.py
+```
+
 ## 1. Aux files with a plain text file
 
 In this example we will add a simple linear trend to ten years of data, and view the results using
