@@ -1,8 +1,6 @@
 # Add a custom step in the pipeline
 
-In this exercise, we will look into how to add a custom step to the pipeline.
-
-Considering "Upward Ocean Mass Transport" dataset from `fesom` model.
+In this exercise, we will look into how to add a custom step to the pipeline, to compute the CMOR-compliant "Upward Ocean Mass Transport" dataset from `fesom` model data, as specified in `cmip6-cmor-tables/Tables/CMIP6_Omon.json`. The units for such a dataset should be `kg s-1`.
 
 The vertical velocity component 𝑤 (saved as ``wo`` in fesom) is scaled by the
 cell area (`m2`) as well as a reference water density 𝜌0 = 1035 kg m−3.
