@@ -1,5 +1,5 @@
 general:
-  name: "wo_cellarea"
+  name: "incorrect_units"
   cmor_version: "CMIP6"
   mip: "CMIP"
   CMIP_Tables_Dir: "../../cmip6-cmor-tables/Tables"
@@ -10,39 +10,26 @@ pymor:
   use_flox: True
   dask_cluster: local
   dask_cluster_scaling_mode: fixed
-  dask_cluster_scaling_fixed_jobs: 1
+  fixed_jobs: 1
 rules:
-  - name: cellarea_wo
+  # override incorrect units in source data files.
+  - name: xfgco2
     inputs:
       - path: ../data
-        pattern: wo_fesom_.*nc
-    cmor_variable: wmo
-    model_variable: wo
-    grid_file: /pool/data/AWICM/FESOM1/MESHES/core/griddes.nc
-    mesh_path: /pool/data/AWICM/FESOM1/MESHES/core
+        pattern: xCO2f_fesom_mon_.*nc
+    cmor_variable: fgco2
+    model_variable: CO2f
+    # UNITS IN DATA FILE ARE WRONG.
+    # PROVIDE CORRECT UNITS USING `model_unit` parameter.
+    # UNITS to set "mmolC/m2/d"
+    table_id: Omon
     output_directory: .
     variant_label: r1i1p1f1
     experiment_id: piControl
     source_id: AWI-CM-1-1-HR
-    model_component: seaIce
+    model_component: ocnBgchem
     grid_label: gn
-    is_qualname: True
-    pipelines:
-      - default
-pipelines:
-  - name: default
-    steps:
-      - "pymor.core.gather_inputs.load_mfdataset"
-      - "pymor.std_lib.generic.get_variable"
-      - "script://wo_cellarea.py:nodes_to_levels"
-      - "pymor.std_lib.time_average"
-      - "script://wo_cellarea.py:weight_by_cellarea_and_density"
-      - "pymor.std_lib.units.handle_unit_conversion"
-      - "pymor.std_lib.setgrid.setgrid"
-      - "pymor.std_lib.global_attributes.set_global_attributes"
-      - "pymor.std_lib.generic.trigger_compute"
-      - "pymor.std_lib.generic.show_data"
-      - "pymor.std_lib.files.save_dataset"
+
 # Settings for using dask-distributed
 distributed:
   worker:
