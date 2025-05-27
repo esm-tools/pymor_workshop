@@ -13,7 +13,7 @@ Exercise folder: `temporal_frequency`
 
 # Exercise
 
-For this exercise, `CO2f` variable with quarterly temporal frequency is used.
+For this exercise, `CO2f` variable with quarterly temporal frequency is used (`../data/qCO2f_fesom_quaterly_*.nc`).
 As this variable maps to `fgco2` variable which is found in both monthly and yearly CMIP tables, Pymor should only consider yearly CMIP table for cmorization.
 
 ---
