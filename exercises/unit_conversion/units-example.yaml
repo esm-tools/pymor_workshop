@@ -2,8 +2,8 @@ general:
   name: "units-example"
   cmor_version: "CMIP6"
   mip: "CMIP"
-  CMIP_Tables_Dir: "../../cmip6-cmor-tables/Tables"
-  CV_Dir: "../../cmip6-cmor-tables/CMIP6_CVs"
+  CMIP_Tables_Dir: "/home/a/a270077/pymor-workshop/cmip6-cmor-tables/Tables/"
+  CV_Dir: "/home/a/a270077/pymor-workshop/cmip6-cmor-tables/CMIP6_CVs/"
 pymor:
   # parallel: True
   warn_on_no_rule: False
@@ -14,7 +14,7 @@ pymor:
 rules:
   - name: fgco2
     inputs:
-      - path: ../data
+      - path: /home/a/a270077/pymor-workshop/synthetic-data/
         pattern: CO2f_fesom_mon_.*nc
     cmor_variable: fgco2
     model_variable: CO2f
