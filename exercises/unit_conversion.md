@@ -34,7 +34,7 @@ The units for `CO2f` is `mmolC/m2/d`.  The unit for `fgco2` in CMIP tables is `k
 
   ```bash
   # change directory to exercise folder
-  cd /work/$(id -gn)/$USER/pymor_workshop/exercise
+  cd /work/$(id -gn)/$USER/pymor_workshop/exercises
   
   # grep for units in source file
   ncdump -h data/CO2f_fesom_mon_30010101.nc | grep units
