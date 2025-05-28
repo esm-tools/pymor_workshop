@@ -2,15 +2,15 @@ general:
   name: "wo_cellarea"
   cmor_version: "CMIP6"
   mip: "CMIP"
-  CMIP_Tables_Dir: "/work/ab0995/a270243/pymorize/cmip6-cmor-tables/Tables"
-  CV_Dir: "/work/ab0995/a270243/pymorize/cmip6-cmor-tables/CMIP6_CVs"
-pymorize:
+  CMIP_Tables_Dir: "../../cmip6-cmor-tables/Tables"
+  CV_Dir: "../../cmip6-cmor-tables/CMIP6_CVs"
+pymor:
   # parallel: True
   warn_on_no_rule: False
   use_flox: True
-  dask_cluster: "slurm"
+  dask_cluster: local
   dask_cluster_scaling_mode: fixed
-  fixed_jobs: 12
+  dask_cluster_scaling_fixed_jobs: 1
 rules:
   - name: cellarea_wo
     inputs:
@@ -32,17 +32,17 @@ rules:
 pipelines:
   - name: default
     steps:
-      - "pymorize.core.gather_inputs.load_mfdataset"
-      - "pymorize.std_lib.generic.get_variable"
-      - "script://./wo_cellarea.py:nodes_to_levels"
-      - "pymorize.std_lib.timeaverage.compute_average"
-      - "script://./wo_cellarea.py:weight_by_cellarea_and_density"
-      - "pymorize.std_lib.units.handle_unit_conversion"
-      - "pymorize.std_lib.setgrid.setgrid"
-      - "pymorize.std_lib.global_attributes.set_global_attributes"
-      - "pymorize.std_lib.generic.trigger_compute"
-      - "pymorize.std_lib.generic.show_data"
-      - "pymorize.std_lib.files.save_dataset"
+      - "pymor.core.gather_inputs.load_mfdataset"
+      - "pymor.std_lib.generic.get_variable"
+      - "script://wo_cellarea.py:nodes_to_levels"
+      - "pymor.std_lib.time_average"
+      - "script://wo_cellarea.py:weight_by_cellarea_and_density"
+      - "pymor.std_lib.units.handle_unit_conversion"
+      - "pymor.std_lib.setgrid.setgrid"
+      - "pymor.std_lib.global_attributes.set_global_attributes"
+      - "pymor.std_lib.generic.trigger_compute"
+      - "pymor.std_lib.generic.show_data"
+      - "pymor.std_lib.files.save_dataset"
 # Settings for using dask-distributed
 distributed:
   worker:
@@ -57,9 +57,9 @@ distributed:
 # SLURM-specific settings for launching workers
 jobqueue:
   slurm:
-    name: pymorize-worker
+    name: pymor-worker
     queue: compute # SLURM queue/partition to submit jobs
-    account: ab0246 # SLURM project/account name
+    account:        # SLURM project/account name
     cores: 4 # Number of cores per worker
     memory: 128GB # Memory per worker
     walltime: '00:30:00' # Maximum walltime per job

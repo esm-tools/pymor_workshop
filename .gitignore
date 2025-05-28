@@ -1,8 +1,11 @@
+.envrc
+.direnv/
 **/data/
 **/*.nc
 **/logs/*
 **/slurm-*.out
 **/slurm-*.err
 **/pymor_report.log
+**/.DS_Store
 **/cmip6-cmor-tables/
 **/__pycache__/

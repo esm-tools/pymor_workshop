@@ -40,9 +40,9 @@ distributed:
 # SLURM-specific settings for launching workers
 jobqueue:
   slurm:
-    name: pymorize-worker
+    name: pymor-worker
     queue: compute # SLURM queue/partition to submit jobs
-    account: ab0246 # SLURM project/account name
+    account:        # SLURM project/account name
     cores: 4 # Number of cores per worker
     memory: 128GB # Memory per worker
     walltime: '00:30:00' # Maximum walltime per job
