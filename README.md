@@ -23,7 +23,7 @@ During the live workshop, you'll be able to use the QOS `--qos=training` in DKRZ
   * Workshop intro - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/aims_outline.pdf) @pgierz 
     * Aims
     * Outline
-  * Pymor - [Slides]() @siligam 
+  * Pymor - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/pymor_intro.pdf) @siligam 
     * What is Pymor?
     * Main Pymor features
   * Demo: [pymor cli](https://github.com/esm-tools/pymor_workshop/blob/main/demos/cli.md) @pgierz
