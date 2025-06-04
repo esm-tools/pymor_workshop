@@ -1,9 +1,9 @@
-CO2f_fesom_mon_22010101.nc:
+CO2f_fesom_mon_30010101.nc:
   dimensions:
     time: 
       size: 12
       dtype: datetime
-      start_date: 2201-01-01
+      start_date: 3001-01-01
       freq: MS
     bnds: 2
     nodes_2d: 126859
@@ -35,12 +35,12 @@ CO2f_fesom_mon_22010101.nc:
     output_schedule: 'unit: d first: 1 rate: 1'
     frequency: mon
     CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
-CO2f_fesom_mon_22020101.nc:
+CO2f_fesom_mon_30020101.nc:
   dimensions:
     time: 
       size: 12
       dtype: datetime
-      start_date: 2202-01-01
+      start_date: 3002-01-01
       freq: MS
     bnds: 2
     nodes_2d: 126859
@@ -72,12 +72,12 @@ CO2f_fesom_mon_22020101.nc:
     output_schedule: 'unit: d first: 1 rate: 1'
     frequency: mon
     CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
-CO2f_fesom_mon_22030101.nc:
+CO2f_fesom_mon_30030101.nc:
   dimensions:
     time: 
       size: 12
       dtype: datetime
-      start_date: 2203-01-01
+      start_date: 3003-01-01
       freq: MS
     bnds: 2
     nodes_2d: 126859
@@ -109,12 +109,12 @@ CO2f_fesom_mon_22030101.nc:
     output_schedule: 'unit: d first: 1 rate: 1'
     frequency: mon
     CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
-CO2f_fesom_mon_22040101.nc:
+CO2f_fesom_mon_30040101.nc:
   dimensions:
     time:
       size: 12
       dtype: datetime
-      start_date: 2204-01-01
+      start_date: 3004-01-01
       freq: MS
     bnds: 2
     nodes_2d: 126859
@@ -146,14 +146,14 @@ CO2f_fesom_mon_22040101.nc:
     output_schedule: 'unit: d first: 1 rate: 1'
     frequency: mon
     CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
-CO2f_fesom_mon_22050101.nc:
+CO2f_fesom_mon_30050101.nc:
   dimensions:
     bnds: 2
     nodes_2d: 126859
     time:
       size: 12
       dtype: datetime
-      start_date: 2205-01-01
+      start_date: 3005-01-01
       freq: MS
   variables:
     time_bnds:
@@ -863,12 +863,12 @@ modelA_temp_18590101.nc:
   global_attrs:
     title: Synthetic Surface Temperature Data
     history: Created on 2025-05-27
-qCO2f_fesom_quaterly_2201.nc:
+qCO2f_fesom_quaterly_3001.nc:
   dimensions:
     time: 
       size: 4
       dtype: datetime
-      start_date: 2201-01-01
+      start_date: 3001-01-01
       freq: QS
     nodes_2d: 126859
   variables:
@@ -891,13 +891,13 @@ qCO2f_fesom_quaterly_2201.nc:
     output_schedule: 'unit: d first: 1 rate: 1'
     frequency: mon
     CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
-qCO2f_fesom_quaterly_2202.nc:
+qCO2f_fesom_quaterly_3002.nc:
   dimensions:
     nodes_2d: 126859
     time: 
       size: 4
       dtype: datetime
-      start_date: 2202-01-01
+      start_date: 3002-01-01
       freq: QS
   variables:
     CO2f:
@@ -919,13 +919,13 @@ qCO2f_fesom_quaterly_2202.nc:
     output_schedule: 'unit: d first: 1 rate: 1'
     frequency: mon
     CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
-qCO2f_fesom_quaterly_2203.nc:
+qCO2f_fesom_quaterly_3003.nc:
   dimensions:
     nodes_2d: 126859
     time: 
       size: 4
       dtype: datetime
-      start_date: 2203-01-01
+      start_date: 3003-01-01
       freq: QS
   variables:
     CO2f:
@@ -947,13 +947,13 @@ qCO2f_fesom_quaterly_2203.nc:
     output_schedule: 'unit: d first: 1 rate: 1'
     frequency: mon
     CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
-qCO2f_fesom_quaterly_2204.nc:
+qCO2f_fesom_quaterly_3004.nc:
   dimensions:
     nodes_2d: 126859
     time: 
       size: 4
       dtype: datetime
-      start_date: 2204-01-01
+      start_date: 3004-01-01
       freq: QS
   variables:
     CO2f:
@@ -975,13 +975,13 @@ qCO2f_fesom_quaterly_2204.nc:
     output_schedule: 'unit: d first: 1 rate: 1'
     frequency: mon
     CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
-qCO2f_fesom_quaterly_2205.nc:
+qCO2f_fesom_quaterly_3005.nc:
   dimensions:
     nodes_2d: 126859
     time: 
       size: 4
       dtype: datetime
-      start_date: 2205-01-01
+      start_date: 3005-01-01
       freq: QS
   variables:
     CO2f:
@@ -1003,14 +1003,14 @@ qCO2f_fesom_quaterly_2205.nc:
     output_schedule: 'unit: d first: 1 rate: 1'
     frequency: mon
     CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
-so_fesom_mon_22000101.nc:
+so_fesom_mon_30000101.nc:
   dimensions:
     bnds: 2
     nodes_3d: 3668773
     time: 
       size: 12
       dtype: datetime
-      start_date: 2200-01-01
+      start_date: 3000-01-01
       freq: MS
   variables:
     time_bnds:
@@ -1040,12 +1040,12 @@ so_fesom_mon_22000101.nc:
     output_schedule: 'unit: d first: 1 rate: 1'
     frequency: mon
     CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
-so_fesom_mon_22010101.nc:
+so_fesom_mon_30010101.nc:
   dimensions:
     time: 
       size: 12
       dtype: datetime
-      start_date: 2201-01-01
+      start_date: 3001-01-01
       freq: MS
     bnds: 2
     nodes_3d: 3668773
@@ -1077,14 +1077,14 @@ so_fesom_mon_22010101.nc:
     output_schedule: 'unit: d first: 1 rate: 1'
     frequency: mon
     CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
-so_fesom_mon_22020101.nc:
+so_fesom_mon_30020101.nc:
   dimensions:
     bnds: 2
     nodes_3d: 3668773
     time: 
       size: 12
       dtype: datetime
-      start_date: 2202-01-01
+      start_date: 3002-01-01
       freq: MS
   variables:
     time_bnds:
@@ -1114,14 +1114,14 @@ so_fesom_mon_22020101.nc:
     output_schedule: 'unit: d first: 1 rate: 1'
     frequency: mon
     CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
-so_fesom_mon_22030101.nc:
+so_fesom_mon_30030101.nc:
   dimensions:
     bnds: 2
     nodes_3d: 3668773
     time: 
       size: 12
       dtype: datetime
-      start_date: 2203-01-01
+      start_date: 3003-01-01
       freq: MS
   variables:
     time_bnds:
@@ -1151,14 +1151,14 @@ so_fesom_mon_22030101.nc:
     output_schedule: 'unit: d first: 1 rate: 1'
     frequency: mon
     CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
-so_fesom_mon_22040101.nc:
+so_fesom_mon_30040101.nc:
   dimensions:
     bnds: 2
     nodes_3d: 3668773
     time: 
       size: 12
       dtype: datetime
-      start_date: 2204-01-01
+      start_date: 3004-01-01
       freq: MS
   variables:
     time_bnds:
@@ -1188,14 +1188,14 @@ so_fesom_mon_22040101.nc:
     output_schedule: 'unit: d first: 1 rate: 1'
     frequency: mon
     CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
-so_fesom_mon_22050101.nc:
+so_fesom_mon_30050101.nc:
   dimensions:
     bnds: 2
     nodes_3d: 3668773
     time: 
       size: 12
       dtype: datetime
-      start_date: 2205-01-01
+      start_date: 3005-01-01
       freq: MS
   variables:
     time_bnds:
@@ -1325,14 +1325,14 @@ wo_fesom_26900101.nc:
   global_attrs:
     output_schedule: 'unit: m first: 1 rate: 1'
     history: Created on 2025-05-27
-xCO2f_fesom_mon_22060101.nc:
+xCO2f_fesom_mon_30060101.nc:
   dimensions:
     bnds: 2
     nodes_2d: 126859
     time: 
       size: 12
       dtype: datetime
-      start_date: 2206-01-01
+      start_date: 3006-01-01
       freq: MS
   variables:
     time_bnds:
@@ -1362,14 +1362,14 @@ xCO2f_fesom_mon_22060101.nc:
     output_schedule: 'unit: d first: 1 rate: 1'
     frequency: mon
     CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
-xCO2f_fesom_mon_22070101.nc:
+xCO2f_fesom_mon_30070101.nc:
   dimensions:
     bnds: 2
     nodes_2d: 126859
     time: 
       size: 12
       dtype: datetime
-      start_date: 2207-01-01
+      start_date: 3007-01-01
       freq: MS
   variables:
     time_bnds:
@@ -1399,14 +1399,14 @@ xCO2f_fesom_mon_22070101.nc:
     output_schedule: 'unit: d first: 1 rate: 1'
     frequency: mon
     CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
-xCO2f_fesom_mon_22080101.nc:
+xCO2f_fesom_mon_30080101.nc:
   dimensions:
     bnds: 2
     nodes_2d: 126859
     time: 
       size: 12
       dtype: datetime
-      start_date: 2208-01-01
+      start_date: 3008-01-01
       freq: MS
   variables:
     time_bnds:
@@ -1438,9 +1438,14 @@ xCO2f_fesom_mon_22080101.nc:
     CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
 xCO2f_fesom_mon_30090101.nc:
   dimensions:
-    time: 12
     bnds: 2
     nodes_2d: 126859
+    time: 
+      size: 12
+      dtype: datetime
+      start_date: 3009-01-01
+      freq: MS
+
   variables:
     time_bnds:
       dimensions:

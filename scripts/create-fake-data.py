@@ -106,8 +106,8 @@ def create_dataset_from_spec(spec: Dict[str, Any]) -> xr.Dataset:
                 # Create datetime index
                 start_date = dim_spec.get("start_date", "2000-01-01")
                 freq = dim_spec.get("freq", "D")
-                coords[dim_name] = pd.date_range(
-                    start=start_date, periods=size, freq=freq
+                coords[dim_name] = xr.date_range(
+                    start=str(start_date), periods=size, freq=freq, use_cftime=True
                 )
             else:
                 # Create numeric index
