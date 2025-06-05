@@ -185,7 +185,11 @@ CO2f_fesom_mon_30050101.nc:
     CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
 diags3d01_fesom_29900101.nc:
   dimensions:
-    time: 12
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2990-01-01
+      freq: MS
     nodes_3d: 3668773
   variables:
     diags3d01:
@@ -205,7 +209,11 @@ diags3d01_fesom_29900101.nc:
     history: Created on 2025-05-27
 diags3d01_fesom_29910101.nc:
   dimensions:
-    time: 12
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2991-01-01
+      freq: MS
     nodes_3d: 3668773
   variables:
     diags3d01:
@@ -225,7 +233,11 @@ diags3d01_fesom_29910101.nc:
     history: Created on 2025-05-27
 diags3d01_fesom_29920101.nc:
   dimensions:
-    time: 12
+    time: 
+      size: 12
+      dtype: datetime
+      start_date: 2992-01-01
+      freq: MS
     nodes_3d: 3668773
   variables:
     diags3d01:
@@ -245,7 +257,11 @@ diags3d01_fesom_29920101.nc:
     history: Created on 2025-05-27
 diags3d01_fesom_29930101.nc:
   dimensions:
-    time: 12
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2993-01-01
+      freq: MS
     nodes_3d: 3668773
   variables:
     diags3d01:
@@ -265,7 +281,11 @@ diags3d01_fesom_29930101.nc:
     history: Created on 2025-05-27
 diags3d01_fesom_29940101.nc:
   dimensions:
-    time: 12
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2994-01-01
+      freq: MS
     nodes_3d: 3668773
   variables:
     diags3d01:
@@ -285,7 +305,11 @@ diags3d01_fesom_29940101.nc:
     history: Created on 2025-05-27
 diags3d01_fesom_29950101.nc:
   dimensions:
-    time: 12
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2995-01-01
+      freq: MS
     nodes_3d: 3668773
   variables:
     diags3d01:
@@ -305,7 +329,11 @@ diags3d01_fesom_29950101.nc:
     history: Created on 2025-05-27
 diags3d01_fesom_29960101.nc:
   dimensions:
-    time: 12
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2996-01-01
+      freq: MS
     nodes_3d: 3668773
   variables:
     diags3d01:
@@ -325,7 +353,11 @@ diags3d01_fesom_29960101.nc:
     history: Created on 2025-05-27
 diags3d01_fesom_29970101.nc:
   dimensions:
-    time: 12
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2997-01-01
+      freq: MS
     nodes_3d: 3668773
   variables:
     diags3d01:
@@ -345,7 +377,11 @@ diags3d01_fesom_29970101.nc:
     history: Created on 2025-05-27
 diags3d01_fesom_29980101.nc:
   dimensions:
-    time: 12
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2998-01-01
+      freq: MS
     nodes_3d: 3668773
   variables:
     diags3d01:
@@ -365,7 +401,11 @@ diags3d01_fesom_29980101.nc:
     history: Created on 2025-05-27
 diags3d01_fesom_29990101.nc:
   dimensions:
-    time: 12
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2999-01-01
+      freq: MS
     nodes_3d: 3668773
   variables:
     diags3d01:
@@ -385,7 +425,11 @@ diags3d01_fesom_29990101.nc:
     history: Created on 2025-05-27
 diags3d02_fesom_29900101.nc:
   dimensions:
-    time: 12
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2990-01-01
+      freq: MS
     nodes_3d: 3668773
   variables:
     diags3d02:
@@ -405,7 +449,11 @@ diags3d02_fesom_29900101.nc:
     history: Created on 2025-05-27
 diags3d02_fesom_29910101.nc:
   dimensions:
-    time: 12
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2991-01-01
+      freq: MS
     nodes_3d: 3668773
   variables:
     diags3d02:
@@ -425,7 +473,11 @@ diags3d02_fesom_29910101.nc:
     history: Created on 2025-05-27
 diags3d02_fesom_29920101.nc:
   dimensions:
-    time: 12
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2992-01-01
+      freq: MS
     nodes_3d: 3668773
   variables:
     diags3d02:
@@ -445,7 +497,11 @@ diags3d02_fesom_29920101.nc:
     history: Created on 2025-05-27
 diags3d02_fesom_29930101.nc:
   dimensions:
-    time: 12
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2993-01-01
+      freq: MS
     nodes_3d: 3668773
   variables:
     diags3d02:
@@ -465,7 +521,11 @@ diags3d02_fesom_29930101.nc:
     history: Created on 2025-05-27
 diags3d02_fesom_29940101.nc:
   dimensions:
-    time: 12
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2994-01-01
+      freq: MS
     nodes_3d: 3668773
   variables:
     diags3d02:
@@ -485,7 +545,11 @@ diags3d02_fesom_29940101.nc:
     history: Created on 2025-05-27
 diags3d02_fesom_29950101.nc:
   dimensions:
-    time: 12
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2995-01-01
+      freq: MS
     nodes_3d: 3668773
   variables:
     diags3d02:
@@ -505,7 +569,11 @@ diags3d02_fesom_29950101.nc:
     history: Created on 2025-05-27
 diags3d02_fesom_29960101.nc:
   dimensions:
-    time: 12
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2996-01-01
+      freq: MS
     nodes_3d: 3668773
   variables:
     diags3d02:
@@ -525,7 +593,11 @@ diags3d02_fesom_29960101.nc:
     history: Created on 2025-05-27
 diags3d02_fesom_29970101.nc:
   dimensions:
-    time: 12
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2997-01-01
+      freq: MS
     nodes_3d: 3668773
   variables:
     diags3d02:
@@ -545,7 +617,11 @@ diags3d02_fesom_29970101.nc:
     history: Created on 2025-05-27
 diags3d02_fesom_29980101.nc:
   dimensions:
-    time: 12
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2998-01-01
+      freq: MS
     nodes_3d: 3668773
   variables:
     diags3d02:
@@ -565,7 +641,11 @@ diags3d02_fesom_29980101.nc:
     history: Created on 2025-05-27
 diags3d02_fesom_29990101.nc:
   dimensions:
-    time: 12
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2999-01-01
+      freq: MS
     nodes_3d: 3668773
   variables:
     diags3d02:
@@ -585,7 +665,11 @@ diags3d02_fesom_29990101.nc:
     history: Created on 2025-05-27
 modelA_temp_18500101.nc:
   dimensions:
-    time: 12
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 1850-01-01
+      freq: MS
     lat:
       size: 360
       start: -89.75
@@ -613,7 +697,11 @@ modelA_temp_18500101.nc:
     history: Created on 2025-05-27
 modelA_temp_18510101.nc:
   dimensions:
-    time: 12
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 1851-01-01
+      freq: MS
     lat:
       size: 360
       start: -89.75
@@ -641,7 +729,11 @@ modelA_temp_18510101.nc:
     history: Created on 2025-05-27
 modelA_temp_18520101.nc:
   dimensions:
-    time: 12
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 1852-01-01
+      freq: MS
     lat:
       size: 360
       start: -89.75
@@ -669,7 +761,11 @@ modelA_temp_18520101.nc:
     history: Created on 2025-05-27
 modelA_temp_18530101.nc:
   dimensions:
-    time: 12
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 1853-01-01
+      freq: MS
     lat:
       size: 360
       start: -89.75
@@ -697,7 +793,11 @@ modelA_temp_18530101.nc:
     history: Created on 2025-05-27
 modelA_temp_18540101.nc:
   dimensions:
-    time: 12
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 1854-01-01
+      freq: MS
     lat:
       size: 360
       start: -89.75
@@ -725,7 +825,11 @@ modelA_temp_18540101.nc:
     history: Created on 2025-05-27
 modelA_temp_18550101.nc:
   dimensions:
-    time: 12
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 1855-01-01
+      freq: MS
     lat:
       size: 360
       start: -89.75
@@ -753,7 +857,11 @@ modelA_temp_18550101.nc:
     history: Created on 2025-05-27
 modelA_temp_18560101.nc:
   dimensions:
-    time: 12
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 1856-01-01
+      freq: MS
     lat:
       size: 360
       start: -89.75
@@ -781,7 +889,11 @@ modelA_temp_18560101.nc:
     history: Created on 2025-05-27
 modelA_temp_18570101.nc:
   dimensions:
-    time: 12
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 1857-01-01
+      freq: MS
     lat:
       size: 360
       start: -89.75
@@ -809,7 +921,11 @@ modelA_temp_18570101.nc:
     history: Created on 2025-05-27
 modelA_temp_18580101.nc:
   dimensions:
-    time: 12
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 1858-01-01
+      freq: MS
     lat:
       size: 360
       start: -89.75
@@ -837,7 +953,11 @@ modelA_temp_18580101.nc:
     history: Created on 2025-05-27
 modelA_temp_18590101.nc:
   dimensions:
-    time: 12
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 1859-01-01
+      freq: MS
     lat:
       size: 360
       start: -89.75
@@ -865,7 +985,7 @@ modelA_temp_18590101.nc:
     history: Created on 2025-05-27
 qCO2f_fesom_quaterly_3001.nc:
   dimensions:
-    time: 
+    time:
       size: 4
       dtype: datetime
       start_date: 3001-01-01
@@ -894,7 +1014,7 @@ qCO2f_fesom_quaterly_3001.nc:
 qCO2f_fesom_quaterly_3002.nc:
   dimensions:
     nodes_2d: 126859
-    time: 
+    time:
       size: 4
       dtype: datetime
       start_date: 3002-01-01
@@ -922,7 +1042,7 @@ qCO2f_fesom_quaterly_3002.nc:
 qCO2f_fesom_quaterly_3003.nc:
   dimensions:
     nodes_2d: 126859
-    time: 
+    time:
       size: 4
       dtype: datetime
       start_date: 3003-01-01
@@ -950,7 +1070,7 @@ qCO2f_fesom_quaterly_3003.nc:
 qCO2f_fesom_quaterly_3004.nc:
   dimensions:
     nodes_2d: 126859
-    time: 
+    time:
       size: 4
       dtype: datetime
       start_date: 3004-01-01
@@ -1227,7 +1347,11 @@ so_fesom_mon_30050101.nc:
     CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
 wo_fesom_26860101.nc:
   dimensions:
-    time: 12
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2686-01-01
+      freq: MS
     nodes_3d: 3668773
   variables:
     wo:
@@ -1247,7 +1371,11 @@ wo_fesom_26860101.nc:
     history: Created on 2025-05-27
 wo_fesom_26870101.nc:
   dimensions:
-    time: 12
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2687-01-01
+      freq: MS
     nodes_3d: 3668773
   variables:
     wo:
@@ -1267,7 +1395,11 @@ wo_fesom_26870101.nc:
     history: Created on 2025-05-27
 wo_fesom_26880101.nc:
   dimensions:
-    time: 12
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2688-01-01
+      freq: MS
     nodes_3d: 3668773
   variables:
     wo:
@@ -1287,7 +1419,11 @@ wo_fesom_26880101.nc:
     history: Created on 2025-05-27
 wo_fesom_26890101.nc:
   dimensions:
-    time: 12
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2689-01-01
+      freq: MS
     nodes_3d: 3668773
   variables:
     wo:
@@ -1307,7 +1443,11 @@ wo_fesom_26890101.nc:
     history: Created on 2025-05-27
 wo_fesom_26900101.nc:
   dimensions:
-    time: 12
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2690-01-01
+      freq: MS
     nodes_3d: 3668773
   variables:
     wo:
