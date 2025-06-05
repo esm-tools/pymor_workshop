@@ -112,7 +112,7 @@ def create_dataset_from_spec(spec: Dict[str, Any]) -> xr.Dataset:
             else:
                 # Create numeric index
                 end = start + (size * step)
-                coords[dim_name] = np.arange(start, end, step)
+                coords[dim_name] = np.arange(start, end, step, dtype=dtype)
         else:
             raise ValueError(f"Invalid dimension specification for {dim_name}")
 
@@ -145,6 +145,12 @@ def create_dataset_from_spec(spec: Dict[str, Any]) -> xr.Dataset:
 
     # Create the dataset
     ds = xr.Dataset(data_vars=data_vars, coords=coords)
+
+    # Add coordinate attributes if specified
+    for dim_name, dim_spec in dims.items():
+        if isinstance(dim_spec, dict):
+            attrs = dim_spec.get("attrs", {})
+            ds.coords[dim_name].attrs.update(attrs)
 
     # Add global attributes if specified
     global_attrs = spec.get("global_attrs", {})

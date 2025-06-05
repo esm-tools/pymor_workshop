@@ -16,6 +16,7 @@ import os
 import sys
 from datetime import datetime
 
+import cftime
 import numpy as np
 import rich_click as click
 import ruamel.yaml
@@ -122,6 +123,16 @@ def create_yaml_spec(ds, output_filename):
                     "start_date": str(coord_data[0])[:10],  # YYYY-MM-DD format
                     "freq": infer_time_frequency(coord_data),
                 }
+            elif isinstance(coord_data.dtype, object) and isinstance(
+                coord_data[0], tuple(cftime._cftime.DATE_TYPES.values())
+            ):
+                # Handle datetime dimension
+                file_spec["dimensions"][dim_name] = {
+                    "size": dim_size,
+                    "dtype": "datetime",
+                    "start_date": str(coord_data[0])[:10],  # YYYY-MM-DD format
+                    "freq": infer_time_frequency(coord_data),
+                }
             else:
                 # Handle numeric dimension
                 try:
@@ -210,11 +221,11 @@ def infer_time_frequency(time_values):
     elif 6 <= median_diff <= 8:  # About a week
         return "W"  # Weekly
     elif 28 <= median_diff <= 31:  # About a month
-        return "M"  # Monthly
+        return "MS"  # Monthly
     elif 90 <= median_diff <= 92:  # About a quarter
-        return "Q"  # Quarterly
+        return "QS"  # Quarterly
     elif 365 <= median_diff <= 366:  # About a year
-        return "Y"  # Yearly
+        return "YS"  # Yearly
     else:
         return "D"  # Default to daily
 
