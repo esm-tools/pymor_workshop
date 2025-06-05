@@ -1,0 +1,1616 @@
+CO2f_fesom_mon_30010101.nc:
+  dimensions:
+    time: 
+      size: 12
+      dtype: datetime
+      start_date: 3001-01-01
+      freq: MS
+    bnds: 2
+    nodes_2d: 126859
+  variables:
+    time_bnds:
+      dimensions:
+        - time
+        - bnds
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+    CO2f:
+      dimensions:
+        - time
+        - nodes_2d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        units: mmolC/m2/d
+        CDI_grid_type: unstructured
+        cell_methods: 'time: mean'
+        description: CO2-flux into the surface water
+  global_attrs:
+    CDI: Climate Data Interface version 2.0.5 (https://mpimet.mpg.de/cdi)
+    Conventions: CF-1.6
+    output_schedule: 'unit: d first: 1 rate: 1'
+    frequency: mon
+    CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
+CO2f_fesom_mon_30020101.nc:
+  dimensions:
+    time: 
+      size: 12
+      dtype: datetime
+      start_date: 3002-01-01
+      freq: MS
+    bnds: 2
+    nodes_2d: 126859
+  variables:
+    time_bnds:
+      dimensions:
+        - time
+        - bnds
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+    CO2f:
+      dimensions:
+        - time
+        - nodes_2d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        units: mmolC/m2/d
+        CDI_grid_type: unstructured
+        cell_methods: 'time: mean'
+        description: CO2-flux into the surface water
+  global_attrs:
+    CDI: Climate Data Interface version 2.0.5 (https://mpimet.mpg.de/cdi)
+    Conventions: CF-1.6
+    output_schedule: 'unit: d first: 1 rate: 1'
+    frequency: mon
+    CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
+CO2f_fesom_mon_30030101.nc:
+  dimensions:
+    time: 
+      size: 12
+      dtype: datetime
+      start_date: 3003-01-01
+      freq: MS
+    bnds: 2
+    nodes_2d: 126859
+  variables:
+    time_bnds:
+      dimensions:
+        - time
+        - bnds
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+    CO2f:
+      dimensions:
+        - time
+        - nodes_2d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        units: mmolC/m2/d
+        CDI_grid_type: unstructured
+        cell_methods: 'time: mean'
+        description: CO2-flux into the surface water
+  global_attrs:
+    CDI: Climate Data Interface version 2.0.5 (https://mpimet.mpg.de/cdi)
+    Conventions: CF-1.6
+    output_schedule: 'unit: d first: 1 rate: 1'
+    frequency: mon
+    CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
+CO2f_fesom_mon_30040101.nc:
+  dimensions:
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 3004-01-01
+      freq: MS
+    bnds: 2
+    nodes_2d: 126859
+  variables:
+    time_bnds:
+      dimensions:
+        - time
+        - bnds
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+    CO2f:
+      dimensions:
+        - time
+        - nodes_2d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        units: mmolC/m2/d
+        CDI_grid_type: unstructured
+        cell_methods: 'time: mean'
+        description: CO2-flux into the surface water
+  global_attrs:
+    CDI: Climate Data Interface version 2.0.5 (https://mpimet.mpg.de/cdi)
+    Conventions: CF-1.6
+    output_schedule: 'unit: d first: 1 rate: 1'
+    frequency: mon
+    CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
+CO2f_fesom_mon_30050101.nc:
+  dimensions:
+    bnds: 2
+    nodes_2d: 126859
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 3005-01-01
+      freq: MS
+  variables:
+    time_bnds:
+      dimensions:
+        - time
+        - bnds
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+    CO2f:
+      dimensions:
+        - time
+        - nodes_2d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        units: mmolC/m2/d
+        CDI_grid_type: unstructured
+        cell_methods: 'time: mean'
+        description: CO2-flux into the surface water
+  global_attrs:
+    CDI: Climate Data Interface version 2.0.5 (https://mpimet.mpg.de/cdi)
+    Conventions: CF-1.6
+    output_schedule: 'unit: d first: 1 rate: 1'
+    frequency: mon
+    CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
+diags3d01_fesom_29900101.nc:
+  dimensions:
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2990-01-01
+      freq: MS
+    nodes_3d: 3668773
+  variables:
+    diags3d01:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        description: Diagnostic tracer 01
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-27
+diags3d01_fesom_29910101.nc:
+  dimensions:
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2991-01-01
+      freq: MS
+    nodes_3d: 3668773
+  variables:
+    diags3d01:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        description: Diagnostic tracer 01
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-27
+diags3d01_fesom_29920101.nc:
+  dimensions:
+    time: 
+      size: 12
+      dtype: datetime
+      start_date: 2992-01-01
+      freq: MS
+    nodes_3d: 3668773
+  variables:
+    diags3d01:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        description: Diagnostic tracer 01
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-27
+diags3d01_fesom_29930101.nc:
+  dimensions:
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2993-01-01
+      freq: MS
+    nodes_3d: 3668773
+  variables:
+    diags3d01:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        description: Diagnostic tracer 01
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-27
+diags3d01_fesom_29940101.nc:
+  dimensions:
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2994-01-01
+      freq: MS
+    nodes_3d: 3668773
+  variables:
+    diags3d01:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        description: Diagnostic tracer 01
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-27
+diags3d01_fesom_29950101.nc:
+  dimensions:
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2995-01-01
+      freq: MS
+    nodes_3d: 3668773
+  variables:
+    diags3d01:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        description: Diagnostic tracer 01
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-27
+diags3d01_fesom_29960101.nc:
+  dimensions:
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2996-01-01
+      freq: MS
+    nodes_3d: 3668773
+  variables:
+    diags3d01:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        description: Diagnostic tracer 01
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-27
+diags3d01_fesom_29970101.nc:
+  dimensions:
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2997-01-01
+      freq: MS
+    nodes_3d: 3668773
+  variables:
+    diags3d01:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        description: Diagnostic tracer 01
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-27
+diags3d01_fesom_29980101.nc:
+  dimensions:
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2998-01-01
+      freq: MS
+    nodes_3d: 3668773
+  variables:
+    diags3d01:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        description: Diagnostic tracer 01
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-27
+diags3d01_fesom_29990101.nc:
+  dimensions:
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2999-01-01
+      freq: MS
+    nodes_3d: 3668773
+  variables:
+    diags3d01:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        description: Diagnostic tracer 01
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-27
+diags3d02_fesom_29900101.nc:
+  dimensions:
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2990-01-01
+      freq: MS
+    nodes_3d: 3668773
+  variables:
+    diags3d02:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        description: Diagnostic tracer 02
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-27
+diags3d02_fesom_29910101.nc:
+  dimensions:
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2991-01-01
+      freq: MS
+    nodes_3d: 3668773
+  variables:
+    diags3d02:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        description: Diagnostic tracer 02
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-27
+diags3d02_fesom_29920101.nc:
+  dimensions:
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2992-01-01
+      freq: MS
+    nodes_3d: 3668773
+  variables:
+    diags3d02:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        description: Diagnostic tracer 02
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-27
+diags3d02_fesom_29930101.nc:
+  dimensions:
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2993-01-01
+      freq: MS
+    nodes_3d: 3668773
+  variables:
+    diags3d02:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        description: Diagnostic tracer 02
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-27
+diags3d02_fesom_29940101.nc:
+  dimensions:
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2994-01-01
+      freq: MS
+    nodes_3d: 3668773
+  variables:
+    diags3d02:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        description: Diagnostic tracer 02
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-27
+diags3d02_fesom_29950101.nc:
+  dimensions:
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2995-01-01
+      freq: MS
+    nodes_3d: 3668773
+  variables:
+    diags3d02:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        description: Diagnostic tracer 02
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-27
+diags3d02_fesom_29960101.nc:
+  dimensions:
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2996-01-01
+      freq: MS
+    nodes_3d: 3668773
+  variables:
+    diags3d02:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        description: Diagnostic tracer 02
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-27
+diags3d02_fesom_29970101.nc:
+  dimensions:
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2997-01-01
+      freq: MS
+    nodes_3d: 3668773
+  variables:
+    diags3d02:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        description: Diagnostic tracer 02
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-27
+diags3d02_fesom_29980101.nc:
+  dimensions:
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2998-01-01
+      freq: MS
+    nodes_3d: 3668773
+  variables:
+    diags3d02:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        description: Diagnostic tracer 02
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-27
+diags3d02_fesom_29990101.nc:
+  dimensions:
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2999-01-01
+      freq: MS
+    nodes_3d: 3668773
+  variables:
+    diags3d02:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        description: Diagnostic tracer 02
+        units: ''
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-27
+modelA_temp_18500101.nc:
+  dimensions:
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 1850-01-01
+      freq: MS
+    lat:
+      size: 360
+      start: -89.75
+      step: 0.5
+    lon:
+      size: 720
+      start: 0.0
+      step: 0.5
+  variables:
+    tsurf:
+      dimensions:
+        - time
+        - lat
+        - lon
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        long_name: Surface Temperature
+        units: K
+        standard_name: tsurf
+  global_attrs:
+    title: Synthetic Surface Temperature Data
+    history: Created on 2025-05-27
+modelA_temp_18510101.nc:
+  dimensions:
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 1851-01-01
+      freq: MS
+    lat:
+      size: 360
+      start: -89.75
+      step: 0.5
+    lon:
+      size: 720
+      start: 0.0
+      step: 0.5
+  variables:
+    tsurf:
+      dimensions:
+        - time
+        - lat
+        - lon
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        long_name: Surface Temperature
+        units: K
+        standard_name: tsurf
+  global_attrs:
+    title: Synthetic Surface Temperature Data
+    history: Created on 2025-05-27
+modelA_temp_18520101.nc:
+  dimensions:
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 1852-01-01
+      freq: MS
+    lat:
+      size: 360
+      start: -89.75
+      step: 0.5
+    lon:
+      size: 720
+      start: 0.0
+      step: 0.5
+  variables:
+    tsurf:
+      dimensions:
+        - time
+        - lat
+        - lon
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        long_name: Surface Temperature
+        units: K
+        standard_name: tsurf
+  global_attrs:
+    title: Synthetic Surface Temperature Data
+    history: Created on 2025-05-27
+modelA_temp_18530101.nc:
+  dimensions:
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 1853-01-01
+      freq: MS
+    lat:
+      size: 360
+      start: -89.75
+      step: 0.5
+    lon:
+      size: 720
+      start: 0.0
+      step: 0.5
+  variables:
+    tsurf:
+      dimensions:
+        - time
+        - lat
+        - lon
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        long_name: Surface Temperature
+        units: K
+        standard_name: tsurf
+  global_attrs:
+    title: Synthetic Surface Temperature Data
+    history: Created on 2025-05-27
+modelA_temp_18540101.nc:
+  dimensions:
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 1854-01-01
+      freq: MS
+    lat:
+      size: 360
+      start: -89.75
+      step: 0.5
+    lon:
+      size: 720
+      start: 0.0
+      step: 0.5
+  variables:
+    tsurf:
+      dimensions:
+        - time
+        - lat
+        - lon
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        long_name: Surface Temperature
+        units: K
+        standard_name: tsurf
+  global_attrs:
+    title: Synthetic Surface Temperature Data
+    history: Created on 2025-05-27
+modelA_temp_18550101.nc:
+  dimensions:
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 1855-01-01
+      freq: MS
+    lat:
+      size: 360
+      start: -89.75
+      step: 0.5
+    lon:
+      size: 720
+      start: 0.0
+      step: 0.5
+  variables:
+    tsurf:
+      dimensions:
+        - time
+        - lat
+        - lon
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        long_name: Surface Temperature
+        units: K
+        standard_name: tsurf
+  global_attrs:
+    title: Synthetic Surface Temperature Data
+    history: Created on 2025-05-27
+modelA_temp_18560101.nc:
+  dimensions:
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 1856-01-01
+      freq: MS
+    lat:
+      size: 360
+      start: -89.75
+      step: 0.5
+    lon:
+      size: 720
+      start: 0.0
+      step: 0.5
+  variables:
+    tsurf:
+      dimensions:
+        - time
+        - lat
+        - lon
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        long_name: Surface Temperature
+        units: K
+        standard_name: tsurf
+  global_attrs:
+    title: Synthetic Surface Temperature Data
+    history: Created on 2025-05-27
+modelA_temp_18570101.nc:
+  dimensions:
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 1857-01-01
+      freq: MS
+    lat:
+      size: 360
+      start: -89.75
+      step: 0.5
+    lon:
+      size: 720
+      start: 0.0
+      step: 0.5
+  variables:
+    tsurf:
+      dimensions:
+        - time
+        - lat
+        - lon
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        long_name: Surface Temperature
+        units: K
+        standard_name: tsurf
+  global_attrs:
+    title: Synthetic Surface Temperature Data
+    history: Created on 2025-05-27
+modelA_temp_18580101.nc:
+  dimensions:
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 1858-01-01
+      freq: MS
+    lat:
+      size: 360
+      start: -89.75
+      step: 0.5
+    lon:
+      size: 720
+      start: 0.0
+      step: 0.5
+  variables:
+    tsurf:
+      dimensions:
+        - time
+        - lat
+        - lon
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        long_name: Surface Temperature
+        units: K
+        standard_name: tsurf
+  global_attrs:
+    title: Synthetic Surface Temperature Data
+    history: Created on 2025-05-27
+modelA_temp_18590101.nc:
+  dimensions:
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 1859-01-01
+      freq: MS
+    lat:
+      size: 360
+      start: -89.75
+      step: 0.5
+    lon:
+      size: 720
+      start: 0.0
+      step: 0.5
+  variables:
+    tsurf:
+      dimensions:
+        - time
+        - lat
+        - lon
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        long_name: Surface Temperature
+        units: K
+        standard_name: tsurf
+  global_attrs:
+    title: Synthetic Surface Temperature Data
+    history: Created on 2025-05-27
+qCO2f_fesom_quaterly_3001.nc:
+  dimensions:
+    time:
+      size: 4
+      dtype: datetime
+      start_date: 3001-01-01
+      freq: QS
+    nodes_2d: 126859
+  variables:
+    CO2f:
+      dimensions:
+        - time
+        - nodes_2d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        units: mmolC/m2/d
+        CDI_grid_type: unstructured
+        cell_methods: 'time: mean'
+        description: CO2-flux into the surface water
+  global_attrs:
+    CDI: Climate Data Interface version 2.0.5 (https://mpimet.mpg.de/cdi)
+    Conventions: CF-1.6
+    output_schedule: 'unit: d first: 1 rate: 1'
+    frequency: mon
+    CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
+qCO2f_fesom_quaterly_3002.nc:
+  dimensions:
+    nodes_2d: 126859
+    time:
+      size: 4
+      dtype: datetime
+      start_date: 3002-01-01
+      freq: QS
+  variables:
+    CO2f:
+      dimensions:
+        - time
+        - nodes_2d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        units: mmolC/m2/d
+        CDI_grid_type: unstructured
+        cell_methods: 'time: mean'
+        description: CO2-flux into the surface water
+  global_attrs:
+    CDI: Climate Data Interface version 2.0.5 (https://mpimet.mpg.de/cdi)
+    Conventions: CF-1.6
+    output_schedule: 'unit: d first: 1 rate: 1'
+    frequency: mon
+    CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
+qCO2f_fesom_quaterly_3003.nc:
+  dimensions:
+    nodes_2d: 126859
+    time:
+      size: 4
+      dtype: datetime
+      start_date: 3003-01-01
+      freq: QS
+  variables:
+    CO2f:
+      dimensions:
+        - time
+        - nodes_2d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        units: mmolC/m2/d
+        CDI_grid_type: unstructured
+        cell_methods: 'time: mean'
+        description: CO2-flux into the surface water
+  global_attrs:
+    CDI: Climate Data Interface version 2.0.5 (https://mpimet.mpg.de/cdi)
+    Conventions: CF-1.6
+    output_schedule: 'unit: d first: 1 rate: 1'
+    frequency: mon
+    CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
+qCO2f_fesom_quaterly_3004.nc:
+  dimensions:
+    nodes_2d: 126859
+    time:
+      size: 4
+      dtype: datetime
+      start_date: 3004-01-01
+      freq: QS
+  variables:
+    CO2f:
+      dimensions:
+        - time
+        - nodes_2d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        units: mmolC/m2/d
+        CDI_grid_type: unstructured
+        cell_methods: 'time: mean'
+        description: CO2-flux into the surface water
+  global_attrs:
+    CDI: Climate Data Interface version 2.0.5 (https://mpimet.mpg.de/cdi)
+    Conventions: CF-1.6
+    output_schedule: 'unit: d first: 1 rate: 1'
+    frequency: mon
+    CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
+qCO2f_fesom_quaterly_3005.nc:
+  dimensions:
+    nodes_2d: 126859
+    time: 
+      size: 4
+      dtype: datetime
+      start_date: 3005-01-01
+      freq: QS
+  variables:
+    CO2f:
+      dimensions:
+        - time
+        - nodes_2d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        units: mmolC/m2/d
+        CDI_grid_type: unstructured
+        cell_methods: 'time: mean'
+        description: CO2-flux into the surface water
+  global_attrs:
+    CDI: Climate Data Interface version 2.0.5 (https://mpimet.mpg.de/cdi)
+    Conventions: CF-1.6
+    output_schedule: 'unit: d first: 1 rate: 1'
+    frequency: mon
+    CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
+so_fesom_mon_30000101.nc:
+  dimensions:
+    bnds: 2
+    nodes_3d: 3668773
+    time: 
+      size: 12
+      dtype: datetime
+      start_date: 3000-01-01
+      freq: MS
+  variables:
+    time_bnds:
+      dimensions:
+        - time
+        - bnds
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+    so:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        units: psu
+        CDI_grid_type: unstructured
+        cell_methods: 'time: mean'
+        description: sea water salinity
+  global_attrs:
+    CDI: Climate Data Interface version 2.0.5 (https://mpimet.mpg.de/cdi)
+    Conventions: CF-1.6
+    output_schedule: 'unit: d first: 1 rate: 1'
+    frequency: mon
+    CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
+so_fesom_mon_30010101.nc:
+  dimensions:
+    time: 
+      size: 12
+      dtype: datetime
+      start_date: 3001-01-01
+      freq: MS
+    bnds: 2
+    nodes_3d: 3668773
+  variables:
+    time_bnds:
+      dimensions:
+        - time
+        - bnds
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+    so:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        units: psu
+        CDI_grid_type: unstructured
+        cell_methods: 'time: mean'
+        description: sea water salinity
+  global_attrs:
+    CDI: Climate Data Interface version 2.0.5 (https://mpimet.mpg.de/cdi)
+    Conventions: CF-1.6
+    output_schedule: 'unit: d first: 1 rate: 1'
+    frequency: mon
+    CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
+so_fesom_mon_30020101.nc:
+  dimensions:
+    bnds: 2
+    nodes_3d: 3668773
+    time: 
+      size: 12
+      dtype: datetime
+      start_date: 3002-01-01
+      freq: MS
+  variables:
+    time_bnds:
+      dimensions:
+        - time
+        - bnds
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+    so:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        units: psu
+        CDI_grid_type: unstructured
+        cell_methods: 'time: mean'
+        description: sea water salinity
+  global_attrs:
+    CDI: Climate Data Interface version 2.0.5 (https://mpimet.mpg.de/cdi)
+    Conventions: CF-1.6
+    output_schedule: 'unit: d first: 1 rate: 1'
+    frequency: mon
+    CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
+so_fesom_mon_30030101.nc:
+  dimensions:
+    bnds: 2
+    nodes_3d: 3668773
+    time: 
+      size: 12
+      dtype: datetime
+      start_date: 3003-01-01
+      freq: MS
+  variables:
+    time_bnds:
+      dimensions:
+        - time
+        - bnds
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+    so:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        units: psu
+        CDI_grid_type: unstructured
+        cell_methods: 'time: mean'
+        description: sea water salinity
+  global_attrs:
+    CDI: Climate Data Interface version 2.0.5 (https://mpimet.mpg.de/cdi)
+    Conventions: CF-1.6
+    output_schedule: 'unit: d first: 1 rate: 1'
+    frequency: mon
+    CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
+so_fesom_mon_30040101.nc:
+  dimensions:
+    bnds: 2
+    nodes_3d: 3668773
+    time: 
+      size: 12
+      dtype: datetime
+      start_date: 3004-01-01
+      freq: MS
+  variables:
+    time_bnds:
+      dimensions:
+        - time
+        - bnds
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+    so:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        units: psu
+        CDI_grid_type: unstructured
+        cell_methods: 'time: mean'
+        description: sea water salinity
+  global_attrs:
+    CDI: Climate Data Interface version 2.0.5 (https://mpimet.mpg.de/cdi)
+    Conventions: CF-1.6
+    output_schedule: 'unit: d first: 1 rate: 1'
+    frequency: mon
+    CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
+so_fesom_mon_30050101.nc:
+  dimensions:
+    bnds: 2
+    nodes_3d: 3668773
+    time: 
+      size: 12
+      dtype: datetime
+      start_date: 3005-01-01
+      freq: MS
+  variables:
+    time_bnds:
+      dimensions:
+        - time
+        - bnds
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+    so:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        units: psu
+        CDI_grid_type: unstructured
+        cell_methods: 'time: mean'
+        description: sea water salinity
+  global_attrs:
+    CDI: Climate Data Interface version 2.0.5 (https://mpimet.mpg.de/cdi)
+    Conventions: CF-1.6
+    output_schedule: 'unit: d first: 1 rate: 1'
+    frequency: mon
+    CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
+wo_fesom_26860101.nc:
+  dimensions:
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2686-01-01
+      freq: MS
+    nodes_3d: 3668773
+  variables:
+    wo:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        description: vertical component of ocean velocity
+        units: m s-1
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-27
+wo_fesom_26870101.nc:
+  dimensions:
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2687-01-01
+      freq: MS
+    nodes_3d: 3668773
+  variables:
+    wo:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        description: vertical component of ocean velocity
+        units: m s-1
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-27
+wo_fesom_26880101.nc:
+  dimensions:
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2688-01-01
+      freq: MS
+    nodes_3d: 3668773
+  variables:
+    wo:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        description: vertical component of ocean velocity
+        units: m s-1
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-27
+wo_fesom_26890101.nc:
+  dimensions:
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2689-01-01
+      freq: MS
+    nodes_3d: 3668773
+  variables:
+    wo:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        description: vertical component of ocean velocity
+        units: m s-1
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-27
+wo_fesom_26900101.nc:
+  dimensions:
+    time:
+      size: 12
+      dtype: datetime
+      start_date: 2690-01-01
+      freq: MS
+    nodes_3d: 3668773
+  variables:
+    wo:
+      dimensions:
+        - time
+        - nodes_3d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        description: vertical component of ocean velocity
+        units: m s-1
+        grid_type: unstructured
+  global_attrs:
+    output_schedule: 'unit: m first: 1 rate: 1'
+    history: Created on 2025-05-27
+xCO2f_fesom_mon_30060101.nc:
+  dimensions:
+    bnds: 2
+    nodes_2d: 126859
+    time: 
+      size: 12
+      dtype: datetime
+      start_date: 3006-01-01
+      freq: MS
+  variables:
+    time_bnds:
+      dimensions:
+        - time
+        - bnds
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+    CO2f:
+      dimensions:
+        - time
+        - nodes_2d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        units: mol/m2/d
+        CDI_grid_type: unstructured
+        cell_methods: 'time: mean'
+        description: CO2-flux into the surface water
+  global_attrs:
+    CDI: Climate Data Interface version 2.0.5 (https://mpimet.mpg.de/cdi)
+    Conventions: CF-1.6
+    output_schedule: 'unit: d first: 1 rate: 1'
+    frequency: mon
+    CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
+xCO2f_fesom_mon_30070101.nc:
+  dimensions:
+    bnds: 2
+    nodes_2d: 126859
+    time: 
+      size: 12
+      dtype: datetime
+      start_date: 3007-01-01
+      freq: MS
+  variables:
+    time_bnds:
+      dimensions:
+        - time
+        - bnds
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+    CO2f:
+      dimensions:
+        - time
+        - nodes_2d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        units: mol/m2/d
+        CDI_grid_type: unstructured
+        cell_methods: 'time: mean'
+        description: CO2-flux into the surface water
+  global_attrs:
+    CDI: Climate Data Interface version 2.0.5 (https://mpimet.mpg.de/cdi)
+    Conventions: CF-1.6
+    output_schedule: 'unit: d first: 1 rate: 1'
+    frequency: mon
+    CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
+xCO2f_fesom_mon_30080101.nc:
+  dimensions:
+    bnds: 2
+    nodes_2d: 126859
+    time: 
+      size: 12
+      dtype: datetime
+      start_date: 3008-01-01
+      freq: MS
+  variables:
+    time_bnds:
+      dimensions:
+        - time
+        - bnds
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+    CO2f:
+      dimensions:
+        - time
+        - nodes_2d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        units: mol/m2/d
+        CDI_grid_type: unstructured
+        cell_methods: 'time: mean'
+        description: CO2-flux into the surface water
+  global_attrs:
+    CDI: Climate Data Interface version 2.0.5 (https://mpimet.mpg.de/cdi)
+    Conventions: CF-1.6
+    output_schedule: 'unit: d first: 1 rate: 1'
+    frequency: mon
+    CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
+xCO2f_fesom_mon_30090101.nc:
+  dimensions:
+    bnds: 2
+    nodes_2d: 126859
+    time: 
+      size: 12
+      dtype: datetime
+      start_date: 3009-01-01
+      freq: MS
+
+  variables:
+    time_bnds:
+      dimensions:
+        - time
+        - bnds
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+    CO2f:
+      dimensions:
+        - time
+        - nodes_2d
+      distribution: normal
+      params:
+        mean: 0.0
+        std: 1.0
+      attrs:
+        units: mol/m2/d
+        CDI_grid_type: unstructured
+        cell_methods: 'time: mean'
+        description: CO2-flux into the surface water
+  global_attrs:
+    CDI: Climate Data Interface version 2.0.5 (https://mpimet.mpg.de/cdi)
+    Conventions: CF-1.6
+    output_schedule: 'unit: d first: 1 rate: 1'
+    frequency: mon
+    CDO: Climate Data Operators version 2.0.5 (https://mpimet.mpg.de/cdo)
