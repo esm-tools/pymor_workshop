@@ -32,8 +32,8 @@ During the live workshop, you'll be able to use the QOS `--qos=training` in DKRZ
     * Can you run `pymor --help` and other commands?
     * Maybe you need to upgrade (`pip install --upgrade py-cmor[dev,fesom]`)
 ### 2. Pymor syntax
-  * Presentation - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/yaml_syntax.pdf) @pgierz 
-  * Exercise: [Running a basic pymor process](https://github.com/esm-tools/pymor_workshop/blob/main/exercises/basic.md) @pgierz 
+  * Presentation - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/yaml_syntax.pdf), [Video](https://nextcloud.awi.de/s/AWCYpscWwzozxRW)
+  * Exercise: [Running a basic pymor process](https://github.com/esm-tools/pymor_workshop/blob/main/exercises/basic.md), [Video](https://nextcloud.awi.de/s/gxetpicnqBNdsiK)
 ### 3. Features
 #### 3.1. Units (`module_units` and `cmor_units`)
 * Presentation - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/units.pdf) @pavan
