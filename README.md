@@ -20,13 +20,13 @@ During the live workshop, you'll be able to use the QOS `--qos=training` in DKRZ
 ## Outline
 
 ### 1. Intro
-  * Workshop intro - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/aims_outline.pdf) @pgierz 
+  * Workshop intro - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/aims_outline.pdf), [Video](https://nextcloud.awi.de/s/KswDLXAYfiWeeQS)
     * Aims
     * Outline
-  * Pymor - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/pymor_intro.pdf) @siligam 
+  * Pymor - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/pymor_intro.pdf), [Video](https://nextcloud.awi.de/s/9wRE2YaweAX98bp)
     * What is Pymor?
     * Main Pymor features
-  * Demo: [pymor cli](https://github.com/esm-tools/pymor_workshop/blob/main/demos/cli.md) @pgierz
+  * Demo: [pymor cli](https://github.com/esm-tools/pymor_workshop/blob/main/demos/cli.md), [Video](https://nextcloud.awi.de/s/TLcSQkpos66i33n)
   * Time to resolve installation problems @pgierz
     * Have you installed Pymor inside a conda environment named `pymor` already?
     * Can you run `pymor --help` and other commands?
