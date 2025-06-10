@@ -128,3 +128,10 @@ If you want to be able to see the files as part of your own repository, you can 
 pwd  # You should be in the root of the repository (`/work/$PROJECT/$USER/pymor_workshop`)
 ln -sv /work/ab0995/a270243/pymor_workshop/exercises/data ./exercises/data
 ```
+
+Alternatively, if you would like to use synthetic data made up of random numbers, but with realistic metadata, dimensions,
+and attributes, you can generate some. Make sure you are in the same Python environment as `pymor` is installed for this:
+```bash
+make fake-data
+ln -sv ./fake-data ./exercises/data
+```
