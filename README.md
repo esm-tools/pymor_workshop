@@ -36,11 +36,11 @@ During the live workshop, you'll be able to use the QOS `--qos=training` in DKRZ
   * Exercise: [Running a basic pymor process (text and solutions)](https://github.com/esm-tools/pymor_workshop/blob/main/exercises/basic.md), [Video](https://nextcloud.awi.de/s/gxetpicnqBNdsiK)
 ### 3. Features
 #### 3.1. Units (`module_units` and `cmor_units`)
-* Presentation - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/units.pdf) @pavan
-* Exercise: [Unit conversion](https://github.com/esm-tools/pymor_workshop/blob/main/exercises/unit_conversion.md) 
+* Presentation - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/units.pdf), [Video](https://nextcloud.awi.de/s/NpfBNQ5wBo2GMZx)
+* Exercise: [Unit conversion (text and solutions)](https://github.com/esm-tools/pymor_workshop/blob/main/exercises/unit_conversion.md), [Video](https://nextcloud.awi.de/s/bzmkrYqRfDW3ZF3)
 #### 3.2. Time span for output files (`file_timespan`)
-* Presentation - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/file_timespan.pdf) @pavan
-* Exercise: [File timespan](https://github.com/esm-tools/pymor_workshop/blob/main/exercises/file_timespan.md)
+* Presentation - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/file_timespan.pdf), [Video](https://nextcloud.awi.de/s/Gtn3ezrpWTnR4yj)
+* Exercise: [File timespan (text and solutions)](https://github.com/esm-tools/pymor_workshop/blob/main/exercises/file_timespan.md), [Video](https://nextcloud.awi.de/s/oTTLZW6PpgZxos8)
 #### 3.3. Time averages
 * Presentation - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/timeaverage.pdf) @pavan
 * Exercise: [Temporal frequency](https://github.com/esm-tools/pymor_workshop/blob/main/exercises/temporal_frequency.md)
