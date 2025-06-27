@@ -42,8 +42,8 @@ During the live workshop, you'll be able to use the QOS `--qos=training` in DKRZ
 * Presentation - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/file_timespan.pdf), [Video](https://nextcloud.awi.de/s/Gtn3ezrpWTnR4yj)
 * Exercise: [File timespan (text and solutions)](https://github.com/esm-tools/pymor_workshop/blob/main/exercises/file_timespan.md), [Video](https://nextcloud.awi.de/s/oTTLZW6PpgZxos8)
 #### 3.3. Time averages
-* Presentation - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/timeaverage.pdf), [Video](https://nextcloud.awi.de/s/F4mJFsgNMtWKxWm)
-* Exercise: [Temporal frequency](https://github.com/esm-tools/pymor_workshop/blob/main/exercises/temporal_frequency.md), [Video](https://nextcloud.awi.de/s/3CGimZgwEEa625a)
+* Presentation - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/timeaverage.pdf), [Video](https://nextcloud.awi.de/s/3CGimZgwEEa625a)
+* Exercise: [Temporal frequency](https://github.com/esm-tools/pymor_workshop/blob/main/exercises/temporal_frequency.md), [Video](https://nextcloud.awi.de/s/F4mJFsgNMtWKxWm)
 #### 3.4. Adjusting time stamps of steps
 * Exercise: [Adjust timestamp](https://github.com/esm-tools/pymor_workshop/blob/main/exercises/adjust_timestamp.md), [Video](https://nextcloud.awi.de/s/F4mJFsgNMtWKxWm)
 #### 3.5. Control computing resources
