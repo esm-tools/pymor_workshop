@@ -42,16 +42,17 @@ During the live workshop, you'll be able to use the QOS `--qos=training` in DKRZ
 * Presentation - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/file_timespan.pdf), [Video](https://nextcloud.awi.de/s/Gtn3ezrpWTnR4yj)
 * Exercise: [File timespan (text and solutions)](https://github.com/esm-tools/pymor_workshop/blob/main/exercises/file_timespan.md), [Video](https://nextcloud.awi.de/s/oTTLZW6PpgZxos8)
 #### 3.3. Time averages
-* Presentation - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/timeaverage.pdf) @pavan
-* Exercise: [Temporal frequency](https://github.com/esm-tools/pymor_workshop/blob/main/exercises/temporal_frequency.md)
+* Presentation - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/timeaverage.pdf), [Video](https://nextcloud.awi.de/s/qK8LNg8HoPEBCXb)
+* Exercise: [Temporal frequency](https://github.com/esm-tools/pymor_workshop/blob/main/exercises/temporal_frequency.md), [Video](https://nextcloud.awi.de/s/Fw2fsxXAoKG2GS9)
 #### 3.4. Adjusting time stamps of steps
-* Exercise: [Adjust timestamp](https://github.com/esm-tools/pymor_workshop/blob/main/exercises/adjust_timestamp.md) @pavan
+* Presentation - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/timeaverage.pdf), [Video](https://nextcloud.awi.de/s/rmfD7sZbzTfZNf4)
+* Exercise: [Adjust timestamp](https://github.com/esm-tools/pymor_workshop/blob/main/exercises/adjust_timestamp.md), [Video](https://nextcloud.awi.de/s/xYRrwDMweci7wan)
 #### 3.5. Control computing resources
-* Presentation - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/compute_resources.pdf) @pgierz
-* Exercise: [Costumizing your compute resources](https://github.com/esm-tools/pymor_workshop/blob/main/exercises/compute-resources.md)
+* Presentation - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/compute_resources.pdf), [Video](https://nextcloud.awi.de/s/xdWj32zcXNYBygi)
+* Exercise: [Costumizing your compute resources](https://github.com/esm-tools/pymor_workshop/blob/main/exercises/compute-resources.md), [Video](https://nextcloud.awi.de/s/Ywws9FHHTPdmLCd)
 #### 3.6. Pipelines and custom steps
-* Presentation - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/pipelines_and_custom_steps.pdf) @pgierz
-* Exercise: [Add a custom step in the pipeline](https://github.com/esm-tools/pymor_workshop/blob/main/exercises/custom-step.md)
+* Presentation - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/pipelines_and_custom_steps.pdf), [Video](https://nextcloud.awi.de/s/KkNaoXWESE2zTiM)
+* Exercise: [Add a custom step in the pipeline](https://github.com/esm-tools/pymor_workshop/blob/main/exercises/custom-step.md), [Video](https://nextcloud.awi.de/s/qbzS5MPopt9nBnJ)
 #### 3.7. Combining model output variables
 * Presentation - [Slidex](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/combining_variables.pdf)
 * Exercise: [Using aux files](https://github.com/esm-tools/pymor_workshop/blob/main/exercises/aux_files.md)
