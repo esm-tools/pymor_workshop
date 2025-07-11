@@ -54,10 +54,10 @@ During the live workshop, you'll be able to use the QOS `--qos=training` in DKRZ
 * Presentation - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/pipelines_and_custom_steps.pdf), [Video](https://nextcloud.awi.de/s/KkNaoXWESE2zTiM)
 * Exercise: [Add a custom step in the pipeline](https://github.com/esm-tools/pymor_workshop/blob/main/exercises/custom-step.md), [Video](https://nextcloud.awi.de/s/qbzS5MPopt9nBnJ)
 #### 3.7. Combining model output variables
-* Presentation - [Slidex](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/combining_variables.pdf)
+* Presentation - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/combining_variables.pdf)
 * Exercise: [Using aux files](https://github.com/esm-tools/pymor_workshop/blob/main/exercises/aux_files.md)
 #### 3.8. PyFESOM
-* Presentation - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/pyfesom2_features.pdf) @pgierz
+* Presentation - [Slides](https://github.com/esm-tools/pymor_workshop/blob/main/pdfs/pyfesom2_features.pdf)
 * Exercise: [Using pyfesom2 with pymor](https://github.com/esm-tools/pymor_workshop/blob/main/exercises/pyfesom2_exercises.md)
 ### 4. Try Pymor with your data
 ### 5. Close the workshop
